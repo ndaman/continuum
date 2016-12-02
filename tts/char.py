@@ -18,6 +18,7 @@ from scipy.optimize import fmin
 #second column as time, third has stiffness
 data = np.loadtxt('char_dat.txt')
 
+#variables for laoding data
 newdata = []
 dats = -1
 temps = []
