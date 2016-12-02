@@ -36,6 +36,7 @@ for i in xrange(len(data)):
 plt.figure()
 for i in newdata:
     plt.plot([x[0] for x in i],[x[1] for x in i])
+#plot log of data
 plt.xlabel('Log(t)')
 plt.ylabel('Log(E)')
 plt.show()
