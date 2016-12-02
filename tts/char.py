@@ -12,8 +12,6 @@ from scipy.optimize import fmin
 #load data file, note format:
 #130	2	10.25
 #0	2.25	10.25
-#0	2.5	10.25
-#0	2.75	10.25
 #temperature in first column, but only for first row
 #second column as time, third has stiffness
 data = np.loadtxt('char_dat.txt')
