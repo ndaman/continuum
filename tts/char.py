@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 12 14:46:00 2012
-
-@author: smit1447
-"""
-
 import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import fmin
+plt.style.use('ggplot') #change default plot style
 
 #load data file, note format:
 #130	2	10.25
 #0	2.25	10.25
 #temperature in first column, but only for first row
-#second column as time, third has stiffness
+#second column is time, third is stiffness
 data = np.loadtxt('char_dat.txt')
 
 #variables for laoding data
@@ -46,16 +41,16 @@ for i in xrange(len(newdata)):
     plt.plot([float(x[0]+at[i]) for x in newdata[i]],[x[1] for x in newdata[i]])
 plt.xlabel('Log(t)')
 plt.ylabel('Log(E)')
-
+plt.show()
 
 x0 = [17.4,51.6] #initiial values for optimization
 t = np.array(temps)-150.8 #convert absolute temps to relative
 a = np.array(at) #manual shift values
-#Arrhenius function to model temperature shift factor
+#WLF function to model temperature shift factor
 def myfunc(x):
     ans = x[0]*t[1:]/(x[1]+t[1:])
     return sum((a[1:]-ans)**2)
-#optimize constants in Arrhenius function
+#optimize constants in WLF function
 ans = fmin(myfunc,x0)
 plt.figure()
 plt.plot(t,a,'ko')
