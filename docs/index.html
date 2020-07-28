@@ -5,12 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <title>AE831 Continuum Mechanics</title>
-        <link rel="stylesheet" href="./css/reveal.css">
-        <link rel="stylesheet" href="./css/theme/shocker.css" id="theme">
-        <link rel="stylesheet" href="./css/highlight/zenburn.css">
-        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
 
+        <link rel="stylesheet" href="./reveal.js/css/reset.css">
+        <link rel="stylesheet" href="./reveal.js/css/reveal.css">
+				<link rel="stylesheet" href="./reveal.js/css/theme/shocker.css">
+        <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css">
 
+				<script>
+					var link = document.createElement( 'link' );
+					link.rel = 'stylesheet';
+					link.type = 'text/css';
+					link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+					document.getElementsByTagName( 'head' )[0].appendChild( link );
+				</script>
     </head>
     <body>
 
@@ -29,8 +36,8 @@ data-separator-vertical="^\n----$"><script type="text/template">
 ## class docs
 
 - Syllabus [html](handout/syllabus_f2020.html) [pdf](handout/syllabus_f2020.pdf)
-- Supplemental Elasticity Text [pdf]()
-- Supplemental Continuum Reference [html]
+- Supplemental Elasticity Text [pdf](./handout/AAE%20553%20Text.pdf)
+- Supplemental Continuum Reference [html](https://www.continuummechanics.org/)
 
 ----
 ## homework
@@ -95,8 +102,7 @@ data-separator-vertical="^\n----$"><script type="text/template">
 </script></section></div>
         </div>
 
-        <script src="./lib/js/head.min.js"></script>
-        <script src="./js/reveal.js"></script>
+        <script src="./reveal.js/js/reveal.js"></script>
 
         <script>
             function extend() {
@@ -114,13 +120,13 @@ data-separator-vertical="^\n----$"><script type="text/template">
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: './plugin/zoom-js/zoom.js', async: true },
-              { src: './plugin/notes/notes.js', async: true },
-              { src: './plugin/math/math.js', async: true }
+              { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: './reveal.js/plugin/notes/notes.js', async: true },
+              { src: './reveal.js/plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js
@@ -139,7 +145,6 @@ data-separator-vertical="^\n----$"><script type="text/template">
             var options = {"transition":"fade"};
             options = extend(defaultOptions, options, queryOptions);
         </script>
-
 
         <script>
           Reveal.initialize(options);
