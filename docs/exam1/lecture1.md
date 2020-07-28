@@ -65,7 +65,7 @@ August 18, 2020
 ----
 
 ## research
-j
+
 ![picture of lamborghini symbol made from compression molded chopped carbon fiber](../images/lamborghini-chopped-fiber-badges-rough.jpg)
 
 ----
