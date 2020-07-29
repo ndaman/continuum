@@ -398,6 +398,9 @@ a_i = U_{im} V_{mj} c_j
 - We can express, `$pq$`, but remember the dummy index cannot be repeated more than once
 `$$pq \ne a_m b_m c_m d_m$$`
 
+----
+## multiplication
+
 - Instead we must change the dummy index in one of the expressions first
 `$$pq = a_m b_m c_n d_n$$`
 
@@ -452,14 +455,17 @@ a_i = U_{im} V_{mj} c_j
 - Multiply both sides by `$a_j$`
 `$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j a_j \right] U_k = P_j a_j$$`
 
+----
+## example 
+
 - The dummy indexes can be changed
 `$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] U_k = P_j a_j$$`
 
-----
-## example
-
 - `$a_j \delta_{kj} = a_k$`
 `$$\mu U_k \left[ a_k a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] = P_j a_j$$`
+
+----
+## example
 
 - Factoring
 `$$\mu U_k a_k a_i a_i \left[ 1 + \frac{1}{1-2\nu} \right] = P_j a_j$$`
@@ -474,14 +480,18 @@ a_i = U_{im} V_{mj} c_j
 `$$U_k a_k = \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) }$$`
 
 - This is a scalar equation, we need to find `$U_j$`, but we substitute this back into the original equation.
-- First, expand the original equation
-`$$\mu U_k \delta_{kj} a_i a_i + \mu U_k \frac{1}{1-2\nu} a_k a_j = P_j$$`
 
 ----
 ## example
 
+- First, expand the original equation
+`$$\mu U_k \delta_{kj} a_i a_i + \mu U_k \frac{1}{1-2\nu} a_k a_j = P_j$$`
+
 - After substitution, we find
 `$$\mu U_j a_i a_i + \mu \frac{1}{1-2\nu} \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) } a_j = P_j$$`
+
+----
+## example
 
 - The index `$j$` is repeated too many times, so we need to change `$P_j a_j$` to a different index
 `$$\mu U_j a_i a_i + \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j = P_j$$`
