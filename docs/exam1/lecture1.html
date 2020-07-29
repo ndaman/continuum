@@ -56,15 +56,15 @@
                 { src: '../reveal.js/plugin/notes/notes.js', async: true },
                 { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 { src: '../reveal.js/plugin/math/math.js', async: true }
-              ]
-            });
-						Reveal.configure({
+              ],
 							keyboard: {
 								80: function() { window.location.search += '?print-pdf' }
-							}
-						});
-						Reveal.configure({slideNumber: 'c/t'});
-						Reveal.configure({showSlideNumber: 'all'});
+							},
+							slideNumber: 'c/t',
+							showSlideNumber: 'all',
+							hash: true,
+							history: true
+            });
         </script>
 	</body>
 </html>
