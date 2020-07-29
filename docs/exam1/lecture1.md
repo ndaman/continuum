@@ -227,6 +227,9 @@ August 18, 2020
 - Which we could also write as
 `$$s = \sum_{i=1}^{n}a_ix_i$$`
 
+----
+## index notation
+
 - Using index notation, and Einstein's summation convention, we
   can also write this as
 `$$s = a_ix_i$$`
@@ -237,6 +240,10 @@ August 18, 2020
 - In index notation, a repeated index implies summation
 - This index is also referred to as a dummy index
 - It is called a "dummy index" because the expression would have the same meaning with any index in its place
+
+----
+## dummy index
+
 - i.e. `$i$`, `$j$`, `$k$`, etc. would all have the same meaning when repeated
 - Note, no index may be repeated more than once, thus the expression
   `$$s = \sum_{i=1}^{n}a_ib_ix_i$$` could not be directly written in index notation
@@ -258,23 +265,22 @@ August 18, 2020
 <div class="left">
   
 Free Index
-- Free index is not repeated (on any term)
-- Free index takes all values (1,2,3)
+- NOT repeated (on any term)
+- takes all values (1,2,3)
 - e.g. `$u_i = \langle u_1, u_2, u_3 \rangle$`
-- Free indexes must match across terms in an expression or equation
+- must match across terms in an expression or equation
 
 </div>
  
 <div class="right">
 
 Dummy Index
-- Dummy index is repeated on at least one term
-- Dummy index indicates summation over all values
+- IS repeated on at least one term
+- indicates summation over all values
 - e.g. `$\sigma_{ii} = \sigma_{11} + \sigma_{22} + \sigma_{33}$`
-- Index can not be used more than twice in the same term (`$A_{ij}B_{jk}C_{kl}$` is good, `$A_{ij}B_{ij}C_{ij}$` is not)
+- can not be used more than twice in the same term (`$A_{ij}B_{jk}C_{kl}$` is good, `$A_{ij}B_{ij}C_{ij}$` is not)
 
 </div>
-
 
 ----
 ## dummy index
@@ -322,6 +328,10 @@ Dummy Index
 \end{bmatrix}$$`
 
 - Is also used for higher order tensors
+
+----
+## special symbols
+
 - `$\delta_{ij} = \delta_{ji}$`
 - `$\delta_{ii} =$` `$3$`
 - `$\delta_{ij}a_j =$` `$a_i$`
@@ -340,6 +350,10 @@ Dummy Index
 \right.$$`
 
 - This symbol is not used as frequently as the *Kronecker delta*
+
+----
+## special symbols
+
 - For our uses in this course, it is enough to know that 123, 231, and 312 are even permutations
 - 321, 132, 213 are odd permutations
 - all other indexes are zero
@@ -366,130 +380,111 @@ Dummy Index
 
 - We need to change the free index, `$i$`, to `$m$` in 
 - Since `$m$` is already used as the dummy index, we need to change that too
-`$$b_m = V_{mj} c_j
-\label{eq:seconda}$$`
+`$$\begin{equation}\label{eq:seconda}
+b_m = V_{mj} c_j
+\end{equation}$$`
 
 - We can now make the substitution
-
-- `$$\label{eq:subbed}
-          a_i = U_{im} V_{mj} c_j$$`
+`$$\begin{equation}\label{eq:subbed}
+a_i = U_{im} V_{mj} c_j
+\end{equation}$$`
 
 ----
 ## multiplication
 
-  - We need to be careful with indexes when multiplying expressions
+- We need to be careful with indexes when multiplying expressions
+`$$p = a_m b_m \qquad \text{and} \qquad q = c_m d_m$$`
 
-  - `$$p = a_m b_m \qquad \text{and} \qquad q = c_m d_m$$`
+- We can express, `$pq$`, but remember the dummy index cannot be repeated more than once
+`$$pq \ne a_m b_m c_m d_m$$`
 
-  - We can express, `$pq$`, but remember the dummy index cannot be
-    repeated more than once
-
-  - `$$pq \ne a_m b_m c_m d_m$$`
-
-  - Instead we must change the dummy index in one of the expressions
-    first
-
-  - `$$pq = a_m b_m c_n d_n$$`
+- Instead we must change the dummy index in one of the expressions first
+`$$pq = a_m b_m c_n d_n$$`
 
 ----
 ## factoring
 
-  - In the following expression, we would like to factor out `$n$`, but
-    it has different indexes
+- In the following expression, we would like to factor out `$n$`, but it has different indexes
+`$$T_{ij}n_j - \lambda n_i =0$$`
 
-  - `$$T_{ij}n_j - \lambda n_i =0$$`
+- Recall `$\delta_{ij}a_j = a_i$`, we can rewrite `$n_i = \delta_{ij} n_j$`
+`$$T_{ij}n_j - \lambda \delta_{ij} n_j =0$$`
 
-  - Recall `$\delta_{ij}a_j = a_i$`, we can rewrite
-    `$n_i = \delta_{ij} n_j$`
-
-  - `$$T_{ij}n_j - \lambda \delta_{ij} n_j =0$$`
-
-  - `$$(T_{ij} - \lambda \delta_{ij}) n_j =0$$`
+`$$(T_{ij} - \lambda \delta_{ij}) n_j =0$$`
 
 ----
 ## contraction
 
-  - `$T_{ii}$` is the contraction of `$T_{ij}$`
+- `$T_{ii}$` is the contraction of `$T_{ij}$`
+- This can often be a useful tool in solving tensor equations
+`$$T_{ij} = \lambda \Delta \delta_{ij} + 2\mu E_{ij}$$`
 
-  - This can often be a useful tool in solving tensor equations
-
-  - `$$T_{ij} = \lambda \Delta \delta_{ij} + 2\mu E_{ij}$$`
-
-  - `$$T_{ii} = \lambda \Delta \delta_{ii} + 2\mu E_{ii}$$`
+`$$T_{ii} = \lambda \Delta \delta_{ii} + 2\mu E_{ii}$$`
 
 ----
 ## partial derivative
 
-  - We indicate (partial) derivatives using a comma
-
-  - In three dimensions, we take the partial derivative with respect to
-    each variable (`$x,y,z$` or `$x_1,x_2,x_3$`)
-
-  - For example a scalar property, such as density, can have a different
-    value at any point in space
-
-  - `$\rho = \rho(x_1, x_2, x_3)$`
-    `$$\rho_{,i} = \frac{\partial}{\partial x_i} \rho = \left\langle \frac{\partial \rho }{\partial x_1}, \frac{\partial \rho }{\partial x_2}, \frac{\partial \rho }{\partial x_3} \right\rangle$$`
+- We indicate (partial) derivatives using a comma
+- In three dimensions, we take the partial derivative with respect to each variable (`$x,y,z$` or `$x_1,x_2,x_3$`)
+- For example a scalar property, such as density, can have a different value at any point in space
+- `$\rho = \rho(x_1, x_2, x_3)$`
+`$$\rho_{,i} = \frac{\partial}{\partial x_i} \rho = \left\langle \frac{\partial \rho }{\partial x_1}, \frac{\partial \rho }{\partial x_2}, \frac{\partial \rho }{\partial x_3} \right\rangle$$`
 
 ----
 ## partial derivative
 
-  - Similarly, if we take the partial derivative of a vector, it
-    produces a matrix
-    `$$u_{i,j} = \frac{\partial}{\partial x_j} u_i = \begin{bmatrix}
-            \frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\\
-            \frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\\
-            \frac{\partial u_3}{\partial x_1} & \frac{\partial u_3}{\partial x_2} & \frac{\partial u_3}{\partial x_3}
-            \end{bmatrix}$$`
+- Similarly, if we take the partial derivative of a vector, it produces a matrix
+`$$u_{i,j} = \frac{\partial}{\partial x_j} u_i = \begin{bmatrix}
+	\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\\
+	\frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\\
+	\frac{\partial u_3}{\partial x_1} & \frac{\partial u_3}{\partial x_2} & \frac{\partial u_3}{\partial x_3}
+\end{bmatrix}$$`
 
+---
 # example
 
 ----
 ## example
 
-  - Solve the equation below for `$U_k$` in terms of `$P_i$` and
-    `$a_i$`.
-    `$$\mu \left[ \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j \right] U_k = P_j$$`
+- Solve the equation below for `$U_k$` in terms of `$P_i$` and `$a_i$`.
+`$$\mu \left[ \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j \right] U_k = P_j$$`
 
-  - Multiply both sides by `$a_j$`
-    `$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j a_j \right] U_k = P_j a_j$$`
+- Multiply both sides by `$a_j$`
+`$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_j a_j \right] U_k = P_j a_j$$`
 
-  - The dummy indexes can be changed
-    `$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] U_k = P_j a_j$$`
-
-----
-## example
-
-  - `$a_j \delta_{kj} = a_k$`
-    `$$\mu U_k \left[ a_k a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] = P_j a_j$$`
-
-  - Factoring
-    `$$\mu U_k a_k a_i a_i \left[ 1 + \frac{1}{1-2\nu} \right] = P_j a_j$$`
-
-  - Simplifying
-    `$$\mu U_k a_k a_i a_i \left[ \frac{2(1-\nu)}{1-2\nu} \right] = P_j a_j$$`
+- The dummy indexes can be changed
+`$$\mu \left[ a_j \delta_{kj} a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] U_k = P_j a_j$$`
 
 ----
 ## example
 
-  - Solve for `$U_k a_k$`
-    `$$U_k a_k = \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) }$$`
+- `$a_j \delta_{kj} = a_k$`
+`$$\mu U_k \left[ a_k a_i a_i + \frac{1}{1-2\nu} a_k a_i a_i \right] = P_j a_j$$`
 
-  - This is a scalar equation, we need to find `$U_j$`, but we
-    substitute this back into the original equation.
+- Factoring
+`$$\mu U_k a_k a_i a_i \left[ 1 + \frac{1}{1-2\nu} \right] = P_j a_j$$`
 
-  - First, expand the original equation
-    `$$\mu U_k \delta_{kj} a_i a_i + \mu U_k \frac{1}{1-2\nu} a_k a_j = P_j$$`
+- Simplifying
+`$$\mu U_k a_k a_i a_i \left[ \frac{2(1-\nu)}{1-2\nu} \right] = P_j a_j$$`
 
 ----
 ## example
 
-  - After substitution, we find
-    `$$\mu U_j a_i a_i + \mu \frac{1}{1-2\nu} \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) } a_j = P_j$$`
+- Solve for `$U_k a_k$`
+`$$U_k a_k = \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) }$$`
 
-  - The index `$j$` is repeated too many times, so we need to change
-    `$P_j a_j$` to a different index
-    `$$\mu U_j a_i a_i + \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j = P_j$$`
+- This is a scalar equation, we need to find `$U_j$`, but we substitute this back into the original equation.
+- First, expand the original equation
+`$$\mu U_k \delta_{kj} a_i a_i + \mu U_k \frac{1}{1-2\nu} a_k a_j = P_j$$`
 
-  - We can now solve for `$U_j$`
-    `$$U_j  = \frac{1}{\mu a_i a_i} \left[P_j - \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j\right]$$`
+----
+## example
+
+- After substitution, we find
+`$$\mu U_j a_i a_i + \mu \frac{1}{1-2\nu} \frac{P_j a_j(1-2\nu)}{2\mu a_i a_i (1-\nu) } a_j = P_j$$`
+
+- The index `$j$` is repeated too many times, so we need to change `$P_j a_j$` to a different index
+`$$\mu U_j a_i a_i + \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j = P_j$$`
+
+- We can now solve for `$U_j$`
+`$$U_j  = \frac{1}{\mu a_i a_i} \left[P_j - \frac{P_k a_k}{2 a_i a_i (1-\nu) } a_j\right]$$`
