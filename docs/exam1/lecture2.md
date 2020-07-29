@@ -18,6 +18,18 @@ August 20, 2020
 ----
 ## outline
 
+<!-- vim-markdown-toc GFM -->
+
+* symmetry
+* transformation
+* examples
+* principal values
+* invariants
+* principal directions
+* examples
+
+<!-- vim-markdown-toc -->
+
 ---
 # symmetry
 

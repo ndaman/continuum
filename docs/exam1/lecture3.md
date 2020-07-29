@@ -9,7 +9,8 @@
 
   - 10 Sep - Polar Decomposition
 
-### outline
+----
+## outline
 
 
 ----
@@ -38,6 +39,7 @@
   - Double dot product: `\(A_{ij} B_{ji} = c\)` is written as
     `\(A : B = c\)`
 
+---
 # tensor calculus
 
 ----
@@ -73,7 +75,7 @@
     rate of change of `\(\phi\)` in a certain direction
 
   - If `\(r_i\)` is a vector in a direction, then the directional
-    derivative of the scalar field `\(\phi\)` in the \(r_i\) direction is
+    derivative of the scalar field `\(\phi\)` in the `\(r_i\)` direction is
     `\[\nabla \phi \cdot r = \phi_{,i} r_i\]`
 
   - The vector produced by the gradient will be perpendicular to a
@@ -88,11 +90,11 @@
   - Velocity and displacement are common examples of vector fields
 
   - The gradient of a vector field is a second-order tensor
-    `\[\nabla v_i = v_{i_,j} = \begin{bmatrix}
-            \frac{\partial v_1}{\partial x_1} & \frac{\partial v_1}{\partial x_2} & \frac{\partial v_1}{\partial x_3}\\
-            \frac{\partial v_2}{\partial x_1} & \frac{\partial v_2}{\partial x_2} & \frac{\partial v_2}{\partial x_3}\\
-            \frac{\partial v_3}{\partial x_1} & \frac{\partial v_3}{\partial x_2} & \frac{\partial v_3}{\partial x_3}
-            \end{bmatrix}\]`
+`\[\nabla v_i = v_{i_,j} = \begin{bmatrix}
+	\frac{\partial v_1}{\partial x_1} & \frac{\partial v_1}{\partial x_2} & \frac{\partial v_1}{\partial x_3}\\
+	\frac{\partial v_2}{\partial x_1} & \frac{\partial v_2}{\partial x_2} & \frac{\partial v_2}{\partial x_3}\\
+	\frac{\partial v_3}{\partial x_1} & \frac{\partial v_3}{\partial x_2} & \frac{\partial v_3}{\partial x_3}
+\end{bmatrix}\]`
 
 ----
 ## divergence and curl
@@ -109,7 +111,7 @@
     `\[\text{curl}(v) = 2t^A = -\epsilon_{ijk}v_{j,k}\]`
 
 ----
-## Laplacian
+## laplacian
 
   - The Laplacian of a scalar field is defined as
     `\[\nabla^2 f = \text{div} (\nabla f)\]`
@@ -118,7 +120,7 @@
     `\[\nabla^2 f = f_{i,i} = \frac{\partial^2 f}{\partial x_1^2} + \frac{\partial^2 f}{\partial x_2^2} + \frac{\partial^2 f}{\partial x_3^2}\]`
 
 ----
-## Laplacian
+## laplacian
 
   - The Laplacian of a vector field is defined as
     `\[\nabla^2 v = \nabla (\text{div} (v)) - \text{curl}(\text{curl}(v))\]`
