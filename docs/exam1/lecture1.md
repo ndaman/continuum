@@ -257,21 +257,21 @@ August 18, 2020
 
 <div class="left">
   
-- Free Index
-  - Free index is not repeated (on any term)
-  - Free index takes all values (1,2,3)
-  - e.g. `$u_i = \langle u_1, u_2, u_3 \rangle$`
-  - Free indexes must match across terms in an expression or equation
+Free Index
+- Free index is not repeated (on any term)
+- Free index takes all values (1,2,3)
+- e.g. `$u_i = \langle u_1, u_2, u_3 \rangle$`
+- Free indexes must match across terms in an expression or equation
 
 </div>
  
 <div class="right">
 
-- Dummy Index
-  - Dummy index is repeated on at least one term
-  - Dummy index indicates summation over all values
-  - e.g. `$\sigma_{ii} = \sigma_{11} + \sigma_{22} + \sigma_{33}$`
-  - Index can not be used more than twice in the same term (`$A_{ij}B_{jk}C_{kl}$` is good, `$A_{ij}B_{ij}C_{ij}$` is not)
+Dummy Index
+- Dummy index is repeated on at least one term
+- Dummy index indicates summation over all values
+- e.g. `$\sigma_{ii} = \sigma_{11} + \sigma_{22} + \sigma_{33}$`
+- Index can not be used more than twice in the same term (`$A_{ij}B_{jk}C_{kl}$` is good, `$A_{ij}B_{ij}C_{ij}$` is not)
 
 </div>
 
@@ -289,7 +289,6 @@ August 18, 2020
 ## matrix multiplication
 
 - How can we write matrix multiplication in index notation?
- 
 `$$\begin{bmatrix}
   a_{11} & a_{12} \\
   a_{21} & a_{22}
@@ -311,7 +310,6 @@ August 18, 2020
 
 - For convenience we define two symbols in index notation
 - *Kronecker delta* is a general tensor form of the Identity Matrix
- 
 `$$\delta_{ij} = \left\{
   \begin{array}{ll}
   1& \text{if $i=j$}\\
@@ -353,7 +351,6 @@ August 18, 2020
 
 - When solving tensor equations, we often need to manipulate expressions
 - We need to make sure the correct indexes are used when substituting, for example
- 
 `$$\begin{equation}\label{eq:first}
   a_i = U_{im} b_m
 \end{equation}$$`
