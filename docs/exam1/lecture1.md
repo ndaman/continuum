@@ -223,8 +223,10 @@ August 18, 2020
 
 - Consider the following
 `$$s = a_1x_1 + a_2x_2 + ... + a_nx_n$$`
+
 - Which we could also write as
 `$$s = \sum_{i=1}^{n}a_ix_i$$`
+
 - Using index notation, and Einstein's summation convention, we
   can also write this as
 `$$s = a_ix_i$$`
@@ -301,8 +303,8 @@ August 18, 2020
   c_{21} & c_{22}
 \end{bmatrix}$$`
 
-- `$c_{11} = a_{11} b_{11} + a_{12} b_{21}$`
-- `$c_{12} = a_{11} b_{21} + a_{12} b_{22}$`
+- `$c_{11} = a_{11} b_{11} + a_{12} b_{21}$` <!-- .element class="fragment" -->
+- `$ck{12} = a_{11} b_{21} + a_{12} b_{22}$` <!-- .element class="fragment" -->
 
 ----
 ## special symbols
@@ -357,7 +359,7 @@ August 18, 2020
 `$$\label{eq:second}
   b_i = V_{im} c_m$$`
 
-- To substitute \eqref{eq:second} [`$$eq:second$$`](#eq:second) into \eqref{eq:first} ([`$$eq:first$$`](#eq:first)), we first need to change indexes
+- To substitute \eqref{eq:second} into \eqref{eq:first}, we first need to change indexes
 
 ----
 ## substitution
