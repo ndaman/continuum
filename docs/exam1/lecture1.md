@@ -349,6 +349,7 @@ August 18, 2020
 
 ----
 ## substitution
+<!-- .slide id="mjx-eqn-eq:first" -->
 
 - When solving tensor equations, we often need to manipulate expressions
 - We need to make sure the correct indexes are used when substituting, for example
@@ -366,19 +367,15 @@ August 18, 2020
 ----
 ## substitution
 
-  - We need to change the free index, `$i$`, to `$m$` in
-    ([`$$eq:second$$`](#eq:second))
+- We need to change the free index, `$i$`, to `$m$` in 
+- Since `$m$` is already used as the dummy index, we need to change that too
+`$$b_m = V_{mj} c_j
+\label{eq:seconda}$$`
 
-  - Since `$m$` is already used as the dummy index, we need to change
-    that too
+- We can now make the substitution
 
-  - `$$\label{eq:seconda}
-            b_m = V_{mj} c_j$$`
-
-  - We can now make the substitution
-
-  - `$$\label{eq:subbed}
-            a_i = U_{im} V_{mj} c_j$$`
+- `$$\label{eq:subbed}
+          a_i = U_{im} V_{mj} c_j$$`
 
 ----
 ## multiplication
