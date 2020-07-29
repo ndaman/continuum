@@ -295,15 +295,15 @@ Dummy Index
 
 - How can we write matrix multiplication in index notation?
 $$\begin{bmatrix}
-  a_{11} & a_{12} \
+  a_{11} & a_{12} \\
   a_{21} & a_{22}
   \end{bmatrix}
   \begin{bmatrix}
-  b_{11} & b_{12} \
+  b_{11} & b_{12} \\
   b_{21} & b_{22}
   \end{bmatrix} =
   \begin{bmatrix}
-  c_{11} & c_{12} \
+  c_{11} & c_{12} \\
   c_{21} & c_{22}
 \end{bmatrix}$$
 
@@ -317,12 +317,12 @@ $$\begin{bmatrix}
 - *Kronecker delta* is a general tensor form of the Identity Matrix
 $$\delta_{ij} = \left\{
   \begin{array}{ll}
-  1& \text{if $i=j$}\
+  1& \text{if $i=j$}\\
   0& \text{otherwise}
   \end{array}
   \right. = \begin{bmatrix}
-  1 & 0 & 0\
-  0 & 1 & 0 \
+  1 & 0 & 0\\
+  0 & 1 & 0 \\
   0 & 0 & 1
 \end{bmatrix}$$
 
@@ -342,8 +342,8 @@ $$\delta_{ij} = \left\{
 - *alternating symbol* or *permutation symbol*
 $$\epsilon_{ijk} = \left\{
 \begin{array}{rl}
-  1 & \text{if $ijk$ is an even permutation of 1,2,3}\
-  -1 & \text{if $ijk$ is an odd permutation of 1,2,3}\
+  1 & \text{if $ijk$ is an even permutation of 1,2,3}\\
+  -1 & \text{if $ijk$ is an odd permutation of 1,2,3}\\
   0 & \text{otherwise}
   \end{array}
 \right.$$
@@ -364,13 +364,13 @@ $$\epsilon_{ijk} = \left\{
 
 - When solving tensor equations, we often need to manipulate expressions
 - We need to make sure the correct indexes are used when substituting, for example
-$$\begin{equation}\label{eq:first}
+\begin{equation}\label{eq:first}
   a_i = U_{im} b_m
-\end{equation}$$
+\end{equation}
 
-$$\begin{equation}\label{eq:second}
+\begin{equation}\label{eq:second}
   b_i = V_{im} c_m
-\end{equation}$$
+\end{equation}
 
 - To substitute \eqref{eq:second} into \eqref{eq:first}, we first need to change indexes
 
@@ -379,14 +379,14 @@ $$\begin{equation}\label{eq:second}
 
 - We need to change the free index, $i$, to $m$ in 
 - Since $m$ is already used as the dummy index, we need to change that too
-$$\begin{equation}\label{eq:seconda}
+\begin{equation}\label{eq:seconda}
 b_m = V_{mj} c_j
-\end{equation}$$
+\end{equation}
 
 - We can now make the substitution
-$$\begin{equation}\label{eq:subbed}
+\begin{equation}\label{eq:subbed}
 a_i = U_{im} V_{mj} c_j
-\end{equation}$$
+\end{equation}
 
 
 ## multiplication
@@ -437,8 +437,8 @@ $$\rho_{,i} = \frac{\partial}{\partial x_i} \rho = \left\langle \frac{\partial \
 
 - Similarly, if we take the partial derivative of a vector, it produces a matrix
 $$u_{i,j} = \frac{\partial}{\partial x_j} u_i = \begin{bmatrix}
-	\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\
-	\frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\
+	\frac{\partial u_1}{\partial x_1} & \frac{\partial u_1}{\partial x_2} & \frac{\partial u_1}{\partial x_3}\\
+	\frac{\partial u_2}{\partial x_1} & \frac{\partial u_2}{\partial x_2} & \frac{\partial u_2}{\partial x_3}\\
 	\frac{\partial u_3}{\partial x_1} & \frac{\partial u_3}{\partial x_2} & \frac{\partial u_3}{\partial x_3}
 \end{bmatrix}$$
 

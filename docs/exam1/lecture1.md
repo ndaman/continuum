@@ -365,13 +365,13 @@ Dummy Index
 
 - When solving tensor equations, we often need to manipulate expressions
 - We need to make sure the correct indexes are used when substituting, for example
-`$$\begin{equation}\label{eq:first}
+`\begin{equation}\label{eq:first}
   a_i = U_{im} b_m
-\end{equation}$$`
+\end{equation}`
 
-`$$\begin{equation}\label{eq:second}
+`\begin{equation}\label{eq:second}
   b_i = V_{im} c_m
-\end{equation}$$`
+\end{equation}`
 
 - To substitute \eqref{eq:second} into \eqref{eq:first}, we first need to change indexes
 
@@ -380,14 +380,14 @@ Dummy Index
 
 - We need to change the free index, `$i$`, to `$m$` in 
 - Since `$m$` is already used as the dummy index, we need to change that too
-`$$\begin{equation}\label{eq:seconda}
+`\begin{equation}\label{eq:seconda}
 b_m = V_{mj} c_j
-\end{equation}$$`
+\end{equation}`
 
 - We can now make the substitution
-`$$\begin{equation}\label{eq:subbed}
+`\begin{equation}\label{eq:subbed}
 a_i = U_{im} V_{mj} c_j
-\end{equation}$$`
+\end{equation}`
 
 ----
 ## multiplication
