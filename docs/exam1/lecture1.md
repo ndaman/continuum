@@ -353,11 +353,13 @@ August 18, 2020
 - When solving tensor equations, we often need to manipulate expressions
 - We need to make sure the correct indexes are used when substituting, for example
  
-`$$a_i = U_{im} b_m
-\label{eq:first}$$`
+`$$\begin{equation}\label{eq:first}
+  a_i = U_{im} b_m
+\end{equation}$$`
 
-`$$b_i = V_{im} c_m
-\label{eq:second}$$`
+`$$\begin{equation}\label{eq:second}
+  b_i = V_{im} c_m
+\end{equation}$$`
 
 - To substitute \eqref{eq:second} into \eqref{eq:first}, we first need to change indexes
 
