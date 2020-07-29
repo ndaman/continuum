@@ -304,7 +304,7 @@ August 18, 2020
 \end{bmatrix}$$`
 
 - `$c_{11} = a_{11} b_{11} + a_{12} b_{21}$` <!-- .element class="fragment" -->
-- `$ck{12} = a_{11} b_{21} + a_{12} b_{22}$` <!-- .element class="fragment" -->
+- `$c_{12} = a_{11} b_{21} + a_{12} b_{22}$` <!-- .element class="fragment" -->
 
 ----
 ## special symbols
