@@ -118,10 +118,15 @@ August 20, 2020
 - `\(v^\prime = \langle 2\sqrt{2}, 0 \rangle\)`
 - We can recover the original vector from the transformed coordinates:
 - `\(v = v_1^\prime \hat{e}_1^\prime + v_2^\prime \hat{e}_2^\prime\)`
-- (note:
+
+----
+## 2d coordinate transformation
+
+- note:
 `\[\hat{e}_1^\prime=\langle \frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle\]`
     and
-`\[\hat{e}_2^\prime = \langle -\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle\]`)
+`\[\hat{e}_2^\prime = \langle -\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle\]`
+- therefore
 `\[v = 2\sqrt{2}\langle \frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle, 0 \langle -\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle = \langle 2, 2 \rangle\]`
 
 ----
@@ -129,13 +134,24 @@ August 20, 2020
 
 - Coordinate transformation can become much more complicated in three dimensions, and with higher-order tensors
 - We define `\(Q_{ij}\)` as the cosine of the angle between the `\(x_i^\prime\)` axis and the `\(x_j\)` axis.
+
+----
+## coordinate transformation
+
 - This is also referred to as the "direction cosine" `\[Q_{ij} = \cos (x_i^\prime, x_j)\]`
 - *health warning* the direction cosine can also be defined inversely (`\(Q_{ij} =\cos (x_i, x_j^\prime)\)`), and the indexes are switched in the transformation law
 
 ----
 ## coordinate transformation
 
+<div class="left" width="30%">
+
 - We can use this form on our 2D transformation example
+
+</div>
+
+<div class="right" width="70%">
+
 `\[\begin{aligned}
 	Q_{ij} &= \cos (x_i^\prime, x_j)\\ &= \begin{bmatrix}
 	\cos (x_1^\prime, x_1) & \cos (x_1^\prime, x_2)\\
@@ -148,6 +164,8 @@ August 20, 2020
 	-\sin \theta & \cos \theta
 	\end{bmatrix}
 \end{aligned}\]`
+
+</div>
 
 ----
 ## coordinate transformation
