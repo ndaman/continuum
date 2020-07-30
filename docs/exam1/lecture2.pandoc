@@ -21,6 +21,18 @@ August 20, 2020
 
 ## outline
 
+<!-- vim-markdown-toc GFM -->
+
+* symmetry
+* transformation
+* examples
+* principal values
+* invariants
+* principal directions
+* examples
+
+<!-- vim-markdown-toc -->
+
 
 
 
@@ -57,42 +69,42 @@ August 20, 2020
 - If we transform `\(\textbf{Ta} = c\)` and `\(\textbf{Tb} = d\)`
 - We call `\(\textbf{T}\)` a linear transformation (and a tensor) if
 `[\begin{aligned}
-	\textbf{T}(\textbf{a} + \textbf{b}) &= \textbf{Ta} + \textbf{Tb}\
+	\textbf{T}(\textbf{a} + \textbf{b}) &= \textbf{Ta} + \textbf{Tb}\\
 	\textbf{T}(\alpha \textbf{a}) = \alpha\textbf{Ta}
 \end{aligned}]`
 
 - Where `\(\alpha\)` is any arbitrary scalar and `\(\textbf{a}\)`, `\(\textbf{b}\)` are arbitrary vectors
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation 
 
 ![2d coordinate transformation example with vector pointing from (0,0) to (1,1)](../images/transform2d.svg)
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation 
 
 - The vector, `\(v\)`, remains fixed, but we transform our coordinate system
 - In the new coordinate system, the `\(x_2^\prime\)` portion of `\(v\)` is zero.
 - To transform the coordinate system, we first define some unit vectors.
-- `\(\hat{e}_1\` is a unit vector in the direction of `\(x_1\)`, while `\(\hat{e}_1^\prime\)` is a unit vector in the direction of `\(x_1^\prime\)`
+- `\(\hat{e}_1\)` is a unit vector in the direction of `\(x_1\)`, while `\(\hat{e}_1^\prime\)` is a unit vector in the direction of `\(x_1^\prime\)`
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation 
 
 ![2d coordinate transformation from previous figure with unit vectors drawn along the x and y axes](../images/transform2d-unit.svg)
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation
 
 - For this example, let us assume `\(v = \langle 2, 2 \rangle\)` and `\(\theta = 45^\circ\)`
 - We can write the transformed unit vectors, `\(\hat{e}_1^\prime\)` and `\(\hat{e}_2^\prime\)` in terms of `\(\hat{e}_1\)`, `\(\hat{e}_2\)` and the angle of rotation, `\(\theta\)`. 
 `[\begin{aligned}
-	\hat{e}_1^\prime &= \langle \hat{e}_1 \cos \theta , \hat{e}_2 \sin \theta\rangle\
+	\hat{e}_1^\prime &= \langle \hat{e}_1 \cos \theta , \hat{e}_2 \sin \theta\rangle\\
 	\hat{e}_2^\prime &= \langle -\hat{e}_1 \sin \theta , \hat{e}_2 \cos \theta \rangle
 \end{aligned}]`
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation 
 
 - We can write the vector, `\(v\)`, in terms of the unit vectors describing our axis system
 - `\(v = v_1 \hat{e}_1 + v_2 \hat{e}_2\)`
@@ -100,7 +112,7 @@ August 20, 2020
 - `\(v = \langle 2, 2 \rangle = 2 \langle 1, 0 \rangle + 2 \langle 0,1 \rangle\)`
 
 
-## coordinate transformation in two dimensions
+## 2d coordinate transformation
 
 - When expressed in the transformed coordinate system, we refer to `\(v^\prime\)`
 - `\(v^\prime = \langle v_1 \cos \theta + v_2 \sin \theta, -v_1 \sin \theta + v_2 \cos \theta \rangle\)`
@@ -114,7 +126,7 @@ August 20, 2020
 `[v = 2\sqrt{2}\langle \frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle, 0 \langle -\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2} \rangle = \langle 2, 2 \rangle]`
 
 
-## general coordinate transformation
+## coordinate transformation
 
 - Coordinate transformation can become much more complicated in three dimensions, and with higher-order tensors
 - We define `\(Q_{ij}\)` as the cosine of the angle between the `\(x_i^\prime\)` axis and the `\(x_j\)` axis.
@@ -122,24 +134,24 @@ August 20, 2020
 - *health warning* the direction cosine can also be defined inversely (`\(Q_{ij} =\cos (x_i, x_j^\prime)\)`), and the indexes are switched in the transformation law
 
 
-## general coordinate transformation
+## coordinate transformation
 
 - We can use this form on our 2D transformation example
 `[\begin{aligned}
 	Q_{ij} &= \cos (x_i^\prime, x_j)\ &= \begin{bmatrix}
-	\cos (x_1^\prime, x_1) & \cos (x_1^\prime, x_2)\
+	\cos (x_1^\prime, x_1) & \cos (x_1^\prime, x_2)\\
 	\cos (x_2^\prime, x_1) & \cos (x_2^\prime, x_2)
 	\end{bmatrix}\ &= \begin{bmatrix}
-	\cos \theta & \cos (90-\theta)\
+	\cos \theta & \cos (90-\theta)\\
 	\cos (90+\theta) & \cos \theta
 	\end{bmatrix} \ &= \begin{bmatrix}
-	\cos \theta & \sin \theta \
+	\cos \theta & \sin \theta \\
 	-\sin \theta & \cos \theta
 	\end{bmatrix}
 \end{aligned}]`
 
 
-## general coordinate transformation
+## coordinate transformation
 
 - We can transform any-order tensor using `\(Q_{ij}\)`
 - Vectors (first-order tensors): `\(v^\prime_i = Q_{ij}v_j\)`
@@ -149,7 +161,7 @@ August 20, 2020
 `[C_{ijkl}^\prime = Q_{im}Q_{jn}Q_{ko}Q_{lp}C_{mnop}]`
 
 
-## general coordinate transformation
+## coordinate transformation
 
 - We can similarly use `\(Q_{ij}\)` to find tensors in the original coordinate system
 - Vectors (first-order tensors): `\(v_i = Q_{ji}v_j^\prime\)`
@@ -157,7 +169,7 @@ August 20, 2020
 - Fourth-order tensors: `\(C_{ijkl} = Q_{mi}Q_{nj}Q_{ok}Q_{pl}C_{mnop}^\prime\)`
 
 
-## general coordinate transformation
+## coordinate transformation
 
 - We can derive some interesting properties of the transformation tensor, `\(Q_{ij}\)`
 - We know that `\(v_i = Q_{ji}v_j^\prime\)` and that `\(v^\prime_i = Q_{ij}v_j\)`
@@ -201,12 +213,12 @@ August 20, 2020
 - `\(Q_{ij}^1 = \cos (x_i^\prime,x_j)\)`
 - `\(Q_{ij}^2 = \cos (x_i^{\prime\prime},x_j^\prime)\)`
 `[Q_{ij}^1 = \begin{bmatrix}
-	\cos 60 & \cos 90 & \cos 150\
-	\cos 90 & \cos 0 & \cos 90\
+	\cos 60 & \cos 90 & \cos 150\\
+	\cos 90 & \cos 0 & \cos 90\\
 	\cos 30 & \cos 90 & \cos 60
 	\end{bmatrix}]` `[Q_{ij}^2 = \begin{bmatrix}
-	\cos 30 & \cos 60 & \cos 90\
-	\cos 120 & \cos 30 & \cos 90\
+	\cos 30 & \cos 60 & \cos 90\\
+	\cos 120 & \cos 30 & \cos 90\\
 	\cos 90 & \cos 90 & \cos 0
 \end{bmatrix}]`
 
@@ -249,13 +261,13 @@ August 20, 2020
 
 - Find the principal values of the tensor 
 `[A_{ij} = \begin{bmatrix}
-	1 & 2\
+	1 & 2\\
 	2 & 4
 \end{bmatrix}]`
 
 - From the characteristic equation, we know that `\(\det [A_{ij} - \lambda \delta_{ij}] = 0\)`, or 
 `[\begin{vmatrix}
-	1-\lambda & 2\
+	1-\lambda & 2\\
 	2 & 4 - \lambda
 \end{vmatrix} = 0]`
 
@@ -283,8 +295,8 @@ August 20, 2020
 
 - The invariants can be found by the following equations
 `[\begin{aligned}
-	I_\alpha &= a_{ii}\
-	II_\alpha &= \frac{1}{2}(a_{ii} a_{jj} - a_{ij}a_{ij})\
+	I_\alpha &= a_{ii}\\
+	II_\alpha &= \frac{1}{2}(a_{ii} a_{jj} - a_{ij}a_{ij})\\
 	III_\alpha &= \det [ a_{ij}]
 \end{aligned}]`
 
@@ -293,15 +305,15 @@ August 20, 2020
 
 - In the principal direction, `\(a_{ij}^\prime\)` will be
 `[a_{ij}^\prime = \begin{bmatrix}
-	\lambda_1 & 0 & 0\
-	0 & \lambda_2 & 0\
+	\lambda_1 & 0 & 0\\
+	0 & \lambda_2 & 0\\
 	0 & 0 & \lambda_3
 \end{bmatrix}]`
 
 - Since invariants do not change with coordinate systems, we can also write the invariants as 
 `[\begin{aligned}
-	I_\alpha &= \lambda_1 + \lambda_2 + \lambda_3\
-	II_\alpha &= \lambda_1\lambda_2 + \lambda_2 \lambda_3 + \lambda_3 \lambda_1\
+	I_\alpha &= \lambda_1 + \lambda_2 + \lambda_3\\
+	II_\alpha &= \lambda_1\lambda_2 + \lambda_2 \lambda_3 + \lambda_3 \lambda_1\\
 	III_\alpha &= \lambda_1 \lambda_2 \lambda_3
 \end{aligned}]`
 
@@ -323,7 +335,7 @@ August 20, 2020
 - Find the principal directions for the earlier principal values example
 - Recall `\(\lambda = 0,5\)`, let us say `\(\lambda_1 = 5\)`, we find `\(n_j^{(1)}\)` by 
 `[\begin{bmatrix}
-	1-\lambda_1 & 2\
+	1-\lambda_1 & 2\\
 	2 & 4-\lambda_1
 \end{bmatrix} \begin{Bmatrix}
 	n_1 \ n_2
@@ -331,7 +343,7 @@ August 20, 2020
 
 - This gives 
 `[\begin{bmatrix}
-	-4 & 2\
+	-4 & 2\\
 	2 & -1
 \end{bmatrix} \begin{Bmatrix}
 	n_1 \ n_2
@@ -342,7 +354,7 @@ August 20, 2020
 
 - We proceed to solve the equations using row-reduction, but we find
 `[\begin{bmatrix}
-	2 & -1\
+	2 & -1\\
 	0 & 0
 \end{bmatrix} \begin{Bmatrix}
 	n_1 \ n_2
@@ -358,7 +370,7 @@ August 20, 2020
 
 - Similarly, for `\(\lambda_2 =0\)`, we find 
 `[\begin{bmatrix}
-	1 & 2\
+	1 & 2\\
 	2 & 4
 \end{bmatrix} \begin{Bmatrix}
 	n_1 \ n_2
@@ -366,7 +378,7 @@ August 20, 2020
 
 - Which, after row-reduction, becomes 
 `[\begin{bmatrix}
-	1 & 2\
+	1 & 2\\
 	0 & 0
 \end{bmatrix} \begin{Bmatrix}
 	n_1 \ n_2
@@ -390,14 +402,14 @@ August 20, 2020
 
 - This gives 
 `[Q_{ij} = \frac{1}{\sqrt{5}}\begin{bmatrix}
-	1 & 2\
+	1 & 2\\
 	-2 & 1
 \end{bmatrix}]`
 
 - And we find 
 `[A_{mn}^\prime = Q_{mi}Q_{nj}A_{ij}]`
 `[A_{ij}^\prime = \begin{bmatrix}
-	5 & 0 \
+	5 & 0 \\
 	0 & 0
 \end{bmatrix}]`
 
@@ -408,8 +420,8 @@ August 20, 2020
 
 - Find principal values, principal directions, and invariants for the tensor 
 `[c_{ij} = \begin{bmatrix}
-	8 & 0 & 0\
-	0 & 3 & 1\
+	8 & 0 & 0\\
+	0 & 3 & 1\\
 	0 & 1 & 3
 \end{bmatrix}]`
 
@@ -425,8 +437,8 @@ August 20, 2020
 
 - To find the principal direction for `\(\lambda_1 = 8\)`
 `[\begin{bmatrix}
-	8-8 & 0 & 0\
-	0 & 3-8 & 1\
+	8-8 & 0 & 0\\
+	0 & 3-8 & 1\\
 	0 & 1 & 3-8
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -437,8 +449,8 @@ August 20, 2020
 
 - After row-reduction, we find 
 `[\begin{bmatrix}
-	0 & 0 & 0\
-	0 & 0 & -24\
+	0 & 0 & 0\\
+	0 & 0 & -24\\
 	0 & 1 & -5
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -453,8 +465,8 @@ August 20, 2020
 
 - To find the principal direction for `\(\lambda_2 = 4\)`
 `[\begin{bmatrix}
-	8-4 & 0 & 0\
-	0 & 3-4 & 1\
+	8-4 & 0 & 0\\
+	0 & 3-4 & 1\\
 	0 & 1 & 3-4
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -465,8 +477,8 @@ August 20, 2020
 
 - After row-reduction, we find 
 `[\begin{bmatrix}
-	4 & 0 & 0\
-	0 & -1 & 1\
+	4 & 0 & 0\\
+	0 & -1 & 1\\
 	0 & 0 & 0
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -481,8 +493,8 @@ August 20, 2020
 
 - To find the principal direction for `\(\lambda_3 = 2\)`
 `[\begin{bmatrix}
-	8-2 & 0 & 0\
-	0 & 3-2 & 1\
+	8-2 & 0 & 0\\
+	0 & 3-2 & 1\\
 	0 & 1 & 3-2
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -493,8 +505,8 @@ August 20, 2020
 
 - After row-reduction, we find 
 `[\begin{bmatrix}
-	6 & 0 & 0\
-	0 & 1 & 1\
+	6 & 0 & 0\\
+	0 & 1 & 1\\
 	0 & 0 & 0
 \end{bmatrix}\begin{Bmatrix}
 	n_1 \ n_2 \ n_3
@@ -513,8 +525,8 @@ August 20, 2020
 - `\(\lambda_3 = 2\)` and `\(n^{(3)} = \frac{1}{\sqrt{2}}\langle 0, 1, -1 \rangle\)`
 - We can assemble `\(n^{(i)}\)` into a transformation tensor
 `[Q_{ij} = \frac{1}{\sqrt{2}}\begin{bmatrix}
-	\sqrt{2} & 0 & 0\
-	0 & 1 & 1\
+	\sqrt{2} & 0 & 0\\
+	0 & 1 & 1\\
 	0 & 1 & -1
 \end{bmatrix}]`
 
@@ -524,8 +536,8 @@ August 20, 2020
 - What is `\(c_{ij}^\prime\)`?
 - `\(c_{ij}^\prime = Q_{im}Q_{jn}c_{mn}\)`
 `[c_{ij}^\prime = \begin{bmatrix}
-	8 & 0 & 0 \
-	0 & 4 & 0 \
+	8 & 0 & 0 \\
+	0 & 4 & 0 \\
 	0 & 0 & 2
 \end{bmatrix}]`
 
@@ -534,15 +546,15 @@ August 20, 2020
 
 - We can also find the invariants for 
 `[c_{ij} = \begin{bmatrix}
-	8 & 0 & 0\
-	0 & 3 & 1\
+	8 & 0 & 0\\
+	0 & 3 & 1\\
 	0 & 1 & 3
 \end{bmatrix}]`
 
 - Recall: 
 `[\begin{aligned}
-	I_\alpha &= a_{ii}\
-	II_\alpha &= \frac{1}{2}(a_{ii} a_{jj} - a_{ij}a_{ij})\
+	I_\alpha &= a_{ii}\\
+	II_\alpha &= \frac{1}{2}(a_{ii} a_{jj} - a_{ij}a_{ij})\\
 	III_\alpha &= \det [ a_{ij}]
 \end{aligned}]`
 
