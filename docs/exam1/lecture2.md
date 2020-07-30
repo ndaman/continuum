@@ -153,13 +153,16 @@ August 20, 2020
 <div class="right" width="70%">
 
 `\[\begin{aligned}
-	Q_{ij} &= \cos (x_i^\prime, x_j)\\ &= \begin{bmatrix}
+	Q_{ij} &= \cos (x_i^\prime, x_j)\\
+	&= \begin{bmatrix}
 	\cos (x_1^\prime, x_1) & \cos (x_1^\prime, x_2)\\
 	\cos (x_2^\prime, x_1) & \cos (x_2^\prime, x_2)
-	\end{bmatrix}\\ &= \begin{bmatrix}
+	\end{bmatrix}\\
+	&= \begin{bmatrix}
 	\cos \theta & \cos (90-\theta)\\
 	\cos (90+\theta) & \cos \theta
-	\end{bmatrix} \\ &= \begin{bmatrix}
+	\end{bmatrix} \\
+	&= \begin{bmatrix}
 	\cos \theta & \sin \theta \\
 	-\sin \theta & \cos \theta
 	\end{bmatrix}
