@@ -121,14 +121,12 @@ August 25, 2020
 ----
 ## polar coordinates
 
-----
-## 0.5
+<div class="left">
 
-![image](../Figures/f02-33-01-H8560.jpg)
-<span id="fig:f02-33-01-h8560" label="fig:f02-33-01-h8560">`\[fig:f02-33-01-h8560\]`</span>
+![image](../images/f02-33-01-H8560.jpg)
 
-----
-## 0.5
+</div>
+<div class="right">
 
 - We can readily see that
 
@@ -137,17 +135,18 @@ August 25, 2020
 	e_\theta &= \langle -\sin \theta, \cos \theta \rangle
 \end{aligned}\]`
 
+</div>
+
 ----
 ## polar coordinates
 
-----
-## 0.4
+<div class="left">
 
 ![image](../Figures/f02-33-02-H8560.jpg)
-<span id="fig:f02-33-02-H8560" label="fig:f02-33-02-H8560">`\[fig:f02-33-02-H8560\]`</span>
 
-----
-## 0.6
+</div>
+
+<div class="right">
 
 - We see that as the angle `\(\theta\)` changes, so do the polar coordinate unit base vectors
 
@@ -155,6 +154,8 @@ August 25, 2020
 	d e_r &= \langle -\sin \theta, \cos \theta \rangle = d\theta e_\theta\\
 	de_\theta &= \langle -\cos \theta, -\sin \theta \rangle  = -d\theta e_r
 \end{aligned}\]`
+
+</div>
 
 ----
 ## polar coordinates
@@ -185,6 +186,8 @@ August 25, 2020
 
 ----
 ## cylindrical coordinates
+
+![cylindrical coordinates](../images/cylindrical.svg)
 
 ----
 ## cylindrical coordinates
@@ -230,6 +233,8 @@ August 25, 2020
 ----
 ## spherical coordinates
 
+![spherical coordinates](../images/spheriical.svg)
+
 ----
 ## spherical coordinates
 
@@ -247,7 +252,7 @@ August 25, 2020
 ----
 ## spherical coordinates
 
-`\[\hspace*{-1.2cm} \text{curl} (v_i) = \langle \frac{v_\phi cot\theta+v_{\phi,\theta}}{r} - \frac{v_{\theta,\phi}}{r \sin \theta}, \frac{v_{r,\phi}}{r\sin\theta} - \frac{(rv_{\phi})_{,r}}{r}, \frac{(rv_\theta)_{,r}-v_{r,\theta}}{r} \rangle\]`
+`\[\text{curl} (v_i) = \langle \frac{v_\phi cot\theta+v_{\phi,\theta}}{r} - \frac{v_{\theta,\phi}}{r \sin \theta}, \frac{v_{r,\phi}}{r\sin\theta} - \frac{(rv_{\phi})_{,r}}{r}, \frac{(rv_\theta)_{,r}-v_{r,\theta}}{r} \rangle\]`
 
 `\[\hspace*{-1.2cm} \text{div}(T_{ij}) = \begin{aligned}\langle
 	& \frac{(r^2T_{rr})_{,r}}{r^2} + \frac{(T_{r\theta}\sin\theta)_{,\theta}+T_{r\phi,\phi}}{r\sin\theta} - \frac{T_{\theta\theta} + T_{\phi\phi}}{r}\\
@@ -258,9 +263,9 @@ August 25, 2020
 ----
 ## spherical coordinates
 
-`\[\hspace*{-1.2cm} \nabla^2 f = f_{,rr} + \frac{2 f_{,r}}{r} + \frac{f_{,\theta\theta}+ f_{,\theta}\cot \theta}{r^2} + \frac{f_{,\phi \phi}}{r^2\sin^2\theta}\]`
+`\[\nabla^2 f = f_{,rr} + \frac{2 f_{,r}}{r} + \frac{f_{,\theta\theta}+ f_{,\theta}\cot \theta}{r^2} + \frac{f_{,\phi \phi}}{r^2\sin^2\theta}\]`
 
-`\[\hspace*{-1.2cm} \nabla^2 v_i = \begin{aligned}
+`\[\nabla^2 v_i = \begin{aligned}
 	\langle & \frac{(r^2v_r)_{,rr}+v_{r,\theta\theta} + v_{r,\theta}\cot \theta}{r^2} - \frac{2(r^2v_r)_{,r}}{r^3} + \frac{v_{r,\phi \phi}}{r^2\sin^2\theta} \\
 	&\qquad - \frac{2(v_\theta \sin \theta)_{,\theta} + 2v_{\phi,\phi}}{r^2 \sin \theta}\\
 	&\frac{(r^2 v_{\theta,r})_{,r} \left(\frac{(v_{\theta}\sin\theta)_{,\theta}}{\sin \theta}\right)_{,\theta} + 2v_{r,\theta}}{r^2} + \frac{v_{\theta,\phi\phi}}{r^2\sin^2\theta} - \frac{2 \cot \theta v_{\phi,\phi}}{r^2 \sin\theta}\\
