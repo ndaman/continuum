@@ -142,7 +142,7 @@ August 25, 2020
 
 <div class="left">
 
-![image](../Figures/f02-33-02-H8560.jpg)
+![image](../images/f02-33-02-H8560.jpg)
 
 </div>
 
@@ -254,7 +254,7 @@ August 25, 2020
 
 `\[\text{curl} (v_i) = \langle \frac{v_\phi cot\theta+v_{\phi,\theta}}{r} - \frac{v_{\theta,\phi}}{r \sin \theta}, \frac{v_{r,\phi}}{r\sin\theta} - \frac{(rv_{\phi})_{,r}}{r}, \frac{(rv_\theta)_{,r}-v_{r,\theta}}{r} \rangle\]`
 
-`\[\hspace*{-1.2cm} \text{div}(T_{ij}) = \begin{aligned}\langle
+`\[\text{div}(T_{ij}) = \begin{aligned}\langle
 	& \frac{(r^2T_{rr})_{,r}}{r^2} + \frac{(T_{r\theta}\sin\theta)_{,\theta}+T_{r\phi,\phi}}{r\sin\theta} - \frac{T_{\theta\theta} + T_{\phi\phi}}{r}\\
 	& \frac{(r^3T_{\theta r})_{,r}}{r^3} + \frac{(T_{\theta\theta}\sin\theta)_{,\theta}+T_{\theta\phi,\phi}}{r\sin\theta} + \frac{T_{r\theta} - T_{\theta r}- T_{\phi\phi}\cot\theta}{r}\\
 	& \frac{(r^3T_{\phi r})_{,r}}{r^3} + \frac{(T_{\phi\theta}\sin\theta)_{,\theta}+T_{\phi\phi,\phi}}{r\sin\theta} + \frac{T_{r\phi} - T_{\phi r}+ T_{\theta\phi}\cot\theta}{r}
