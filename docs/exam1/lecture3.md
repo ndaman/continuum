@@ -187,7 +187,7 @@ August 25, 2020
 ----
 ## cylindrical coordinates
 
-![cylindrical coordinates](../images/cylindrical.svg)
+![cylindrical coordinates](../images/cylindrical.svg) <!-- .element width="50%" -->
 
 ----
 ## cylindrical coordinates
@@ -233,7 +233,7 @@ August 25, 2020
 ----
 ## spherical coordinates
 
-![spherical coordinates](../images/spheriical.svg)
+![spherical coordinates](../images/spheriical.svg) <!-- .element width="50%" -->
 
 ----
 ## spherical coordinates
