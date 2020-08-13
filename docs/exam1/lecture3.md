@@ -135,7 +135,7 @@ August 25, 2020
 	e_\theta &= \langle -\sin \theta, \cos \theta \rangle
 \end{aligned}\]`
 
-</div>
+</div class="right">
 
 ----
 ## polar coordinates
@@ -155,7 +155,7 @@ August 25, 2020
 	de_\theta &= \langle -\cos \theta, -\sin \theta \rangle  = -d\theta e_r
 \end{aligned}\]`
 
-</div>
+</div class="right">
 
 ----
 ## polar coordinates
@@ -301,7 +301,7 @@ August 25, 2020
   1& 5 & -5\\
   5 & 0 & 0\\
 	-5 & 0 & 1
-\end{bmatrix}\]` find `\(T_{11}^\prime\)` where `\(e_1^\prime = -e_2 + 2e_3\)` and \(e_2^\prime = e_1\)
+\end{bmatrix}\]` find `\(T_{11}^\prime\)` where `\(e_1^\prime = -e_2 + 2e_3\)` and `\(e_2^\prime = e_1\)` 
 
 - Hint: unless you have an advanced calculator, this problem will be easier in tensor notation, since you need only find one term of the transformed tensor (let `\(i=j=1\)`).
 
