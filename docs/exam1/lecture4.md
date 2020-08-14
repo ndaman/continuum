@@ -37,6 +37,10 @@ August 27, 2020
 
 - For N particles there will be N path lines
 - In a continuum, there are infinitely many particles
+
+----
+## motion of a continuum
+
 - Instead of identifying particles by some identifying number, we identify them by their position
 `\[x_i = x_i (X_1, X_2, X_3,t) \qquad \text{with} \qquad X_i = x_i (X_1, X_2, X_3, t_0)\]`
 
@@ -49,7 +53,7 @@ August 27, 2020
 `\[x_i = X_i + kt \langle 2 X_1, X_2, 0 \rangle\]`
 
 ----
-## material and spatial descriptions
+## material and spatial 
 
 - Common properties that are functions of time in a continuum are temperature, `\(\Theta\)`, velocity, \(v\), and stress, \(T\)
 
@@ -60,6 +64,9 @@ August 27, 2020
 	T &= \hat{T}(X_1, X_2, X_3,t)
 \end{aligned}\]`
 
+----
+## material and spatial 
+
 - The spatial description tracks these properties through fixed locations, i.e. 
 `\[\begin{aligned}
 	\Theta &= \tilde{\Theta}(x_1, x_2, x_3,t)\\
@@ -68,7 +75,7 @@ August 27, 2020
 \end{aligned}\]`
 
 ----
-## material and spatial descriptions
+## material and spatial 
 
 - The motion of a continuum is defined as
 `\[x_i = \langle X_1 + ktX_2, (1+kt)X_2, X_3 \rangle\]`
@@ -93,6 +100,9 @@ August 27, 2020
 - For the spatial description, however, `\(x_i\)` are not constant for a given material with fixed `\(X_i\)`, hence
 `\[\frac{D \Theta}{Dt} = \left(\frac{D \tilde{\Theta}}{Dt}\right)_{X_i-fixed} = \left(\frac{\partial \tilde{\Theta}}{\partial x_i}\right)\frac{\partial x_i}{\partial t} + \left(\frac{\partial \tilde{\Theta}}{\partial t}\right)_{x_i-fixed}\]`
 
+----
+## material derivative
+
 - Since `\(\frac{\partial x_i}{\partial t}\)` for fixed \(X_i\) are the velocity components of a given particle, we can also write
 `\[\frac{D \Theta}{Dt} = \left(\frac{D \tilde{\Theta}}{Dt}\right)_{X_i-fixed} = \frac{\partial \tilde{\Theta}}{\partial t} + v_i \tilde{\Theta}_{,i}\]`
 
@@ -114,6 +124,9 @@ August 27, 2020
 - The acceleration of a particle is the material derivative of the
   velocity of a particle
 `\[a_i = \frac{D v_i}{Dt}\]`
+
+----
+## acceleration of a particle
 
 - If we know the material description of a particle's velocity, this calculation is simple
 
@@ -153,8 +166,11 @@ August 27, 2020
 
 - Rigid translation is given by `\[x_i = X_i + c_i(t)\]`
 - Rigid rotation about a fixed point is given by
-`\[x_i - b_i = R_{ij}(t)(X_j -b_j)\]` Where `\(R_{ij}(t)\)` is a proper
-orthogonal (rotation) tensor
+`\[x_i - b_i = R_{ij}(t)(X_j -b_j)\]` Where `\(R_{ij}(t)\)` is a proper orthogonal (rotation) tensor
+
+----
+## rigid body motion
+
 - When the rigid rotation is about the origin we have
 `\[x_i = R_{ij}(t)X_j\]`
 
@@ -172,18 +188,31 @@ Derive the relation between the velocity of a material point with the angular ve
 ----
 ## infinitesimal deformation
 
-<div class="left">
+<div class="left"> <!-- .element width="40%" -->
 
 ![image](../images/f03-07-01-H8560.jpg)
 
 </div>
 
-<div class="right">
+<div class="right"> <!-- .element width="60%" -->
 
-- We recall `\(P\)`, which undergoes some displacement, \(u\)
-- A neighboring point, `\(Q\)`, at \(X_i + dX_i\) arrives at
+- We recall `\(P\)`, which undergoes some displacement, `\(u\)`
+- A neighboring point, `\(Q\)`, at `\(X_i + dX_i\)` arrives at
 `\(x_i + dx_i\)`
 `\[x_i + dx_i = X_i + dX_i + u_i(X_i + dX_i, t)\]`
+
+</div class="right">
+
+----
+## infinitesimal deformation
+
+<div class="left"> <!-- .element width="40%" -->
+
+![image](../images/f03-07-01-H8560.jpg)
+
+</div>
+
+<div class="right"> <!-- .element width="60%" -->
 
 - Subtracting `\(dx_i\)` and using the definition of the gradient of a vector function, we have `\[dx_i = dX_i + u_{i,j} dX_j\]`
 
@@ -212,6 +241,9 @@ Derive the relation between the velocity of a material point with the angular ve
 - We can rearrange this to 
 `\[dx_i dx_i =  dX_j F_{ij} F_{ik} dX_k\]`
 
+----
+## infinitesimal deformation
+
 - We now define the right Cauchy-Green deformation tensor as `\(C_{jk} = F_{ij} F_{ik}\)`, and note that if `\(C_{jk} = \delta_{jk}\)`, then the deformed length is equal to the original length, corresponding to rigid body motion
 
 ----
@@ -223,6 +255,9 @@ Derive the relation between the velocity of a material point with the angular ve
     \qquad I + \nabla u + (\nabla u)^T + (\nabla u)^T (\nabla u)
 \end{gathered}\]`
 
+----
+## lagrange strain tensor
+
 - We recall that `\(C = I\)` refers to rigid body motion, and thus define the Lagrange strain tensor as one-half of the deformation with no rigid body motion
 `\[E^* = \frac{1}{2} \left[\nabla u + (\nabla u)^T + (\nabla u)^T (\nabla u)\right]\]`
 
@@ -233,6 +268,9 @@ Derive the relation between the velocity of a material point with the angular ve
 - For infinitesimal deformations, we assume that `\((\nabla u)^T (\nabla u)\)` is negligible when compared with `\(\nabla u\)`
 - In this case the Lagrange strain tensor would reduce to
 `\[E = \frac{1}{2} \left[\nabla u + (\nabla u)^T\right]\]`
+
+----
+## lagrange strain tensor
 
 - Which is simply the symmetric portion of `\(\nabla u\)`
 - In rectangular coordinates, we have
@@ -249,6 +287,9 @@ Derive the relation between the velocity of a material point with the angular ve
     \qquad dX_j^{(1)} (\delta_{jk} + 2E_{jk}) dX_k^{(2)}
 \end{gathered}\]`
 
+----
+## physical meaning
+
 - Which we can expand to
 `\[dx_i^{(1)} dx_i^{(2)} = dX_i^{(1)}dX_i^{(2)} + 2E_{jk}dX_j^{(1)}dX_k^{(2)}\]`
 
@@ -260,6 +301,9 @@ Derive the relation between the velocity of a material point with the angular ve
 
 - For small deformations, we make the assumption that
 `\[ds^2 - dS^2 = (ds + dS)(ds - dS) \approx 2dS(ds-dS)\]`
+
+----
+## physical meaning
 
 - Which leads to 
 `\[\frac{ds - dS}{dS} = n_i E_{ij} n_j\]`
@@ -281,6 +325,9 @@ Derive the relation between the velocity of a material point with the angular ve
 - For small deformations (i.e. small `\(\gamma\)`) we have `\(\sin \gamma \approx \gamma\)` and `\(\frac{ds_1}{dS_1} \approx 1\)` and `\(\frac{ds_2}{dS_2} \approx 1\)`
 - This gives 
 `\[\gamma = 2 E_{ij} m_i n_j\]`
+
+----
+## physical meaning
 
 - We can isolate off-diagonal terms in `\(E_{ij}\)` by letting `\(m_i = \langle 1, 0, 0 \rangle\)` and `\(n_j = \langle 0,1,0 \rangle\)` (and other perpendicular directions)
 - This means that `\(2E_{12}\)` gives the change in angle between two elements initially in the `\(x_1\)` and `\(x_2\)` directions
