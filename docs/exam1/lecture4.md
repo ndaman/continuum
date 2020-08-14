@@ -234,7 +234,7 @@ Derive the relation between the velocity of a material point with the angular ve
 ----
 ## infinitesimal deformation
 
-- We can find some interesting information by finding the length of `\(dx_i\)` to the undeformed length of \(dX_i\)
+- We can find some interesting information by finding the length of `\(dx_i\)` to the undeformed length of `\(dX_i\)`
 
 `\[dx_i dx_i = F_{ij} dX_j F_{ik} dX_k\]`
 
@@ -296,7 +296,7 @@ Derive the relation between the velocity of a material point with the angular ve
 ----
 ## physical meaning
 
-- If we look at the length of a single material element, `\(dX_i = dS dn_i\)` we find the deformed length, \(ds\) to be
+- If we look at the length of a single material element, `\(dX_i = dS dn_i\)` we find the deformed length, `\(ds\)` to be
 `\[ds^2 = dS^2 + 2dS^2 (n_i E_{ij} n_j)\]`
 
 - For small deformations, we make the assumption that
@@ -314,7 +314,7 @@ Derive the relation between the velocity of a material point with the angular ve
 ## physical meaning
 
 - If we consider two unit vectors, `\(m_i\)` and `\(n_i\)` which are initially perpendicular, we have `\(dX_i^{(1)} = dS_1 m_i\)` and `\(dX_i^{(2)} = dS_2n_i\)`
-- We can find the angle between the two deformed vectors, `\(dx_i^{(1)}\)` and \(dx_i^{(2)}\)
+- We can find the angle between the two deformed vectors, `\(dx_i^{(1)}\)` and `\(dx_i^{(2)}\)`
 `\[dx_i^{(1)} dx_i^{(2)} = ds_1 ds_2 \cos \theta = 2E_{jk}dS_1 m_j dS_2 n_k\]`
 - Since the angle between the vectors was originally `\(\pi/2\)`, we define the change in angle as `\(\gamma = \pi/2 - \theta\)`
 
