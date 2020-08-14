@@ -103,7 +103,7 @@ August 27, 2020
 ----
 ## material derivative
 
-- Since `\(\frac{\partial x_i}{\partial t}\)` for fixed \(X_i\) are the velocity components of a given particle, we can also write
+- Since `\(\frac{\partial x_i}{\partial t}\)` for fixed `\(X_i\)` are the velocity components of a given particle, we can also write
 `\[\frac{D \Theta}{Dt} = \left(\frac{D \tilde{\Theta}}{Dt}\right)_{X_i-fixed} = \frac{\partial \tilde{\Theta}}{\partial t} + v_i \tilde{\Theta}_{,i}\]`
 
 ----
@@ -188,13 +188,13 @@ Derive the relation between the velocity of a material point with the angular ve
 ----
 ## infinitesimal deformation
 
-<div class="left" style="width='40%';"> 
+<div class="left" style="width: '40%';"> 
 
 ![image](../images/f03-07-01-H8560.jpg)
 
 </div>
 
-<div class="right"style="width='60%';"> 
+<div class="right"style="width: '60%';"> 
 
 - We recall `\(P\)`, which undergoes some displacement, `\(u\)`
 - A neighboring point, `\(Q\)`, at `\(X_i + dX_i\)` arrives at
