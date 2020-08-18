@@ -115,11 +115,8 @@ August 18, 2020
 
 ## office hours
 
-- I will e-mail everyone in the course a Doodle link we can use to find the optimal office hours
-- Let me know if you do not receive the e-mail, you may need to update your information in Blackboard
-- Take advantage of office hours, this is time that I have already set aside for you
-- If the regular office hours do not work for your schedule, send me an e-mail and we can work out a time to meet
-- While in person visits are often the most helpful, I will always try to answer questions as best as I can via e-mail
+- No traditional office hours this year, questions should either be asked during recitation on Tuesday/Thursday
+- Office appointments can be scheduled via e-mail, although remote meetings are preferred
 
 ----
 
@@ -178,7 +175,7 @@ August 18, 2020
 -   I do NOT curve final grades
 -   Instead, each individual exam is curved on a best-fit linear scale
 -   This scale is somewhat subjective, best score is mapped to 100, I pick one other score to map that I feel is representative of a C or a B
--   The end goal of this curve is to get a standard deviation close to 10% and a class average representative of the performance on the exam, usually between a C and a B
+-   The end goal of this curve is to get a standard deviation close to 10% and a class average representative of the performance on the exam, usually around a B
 
 ----
 ## class expectations
