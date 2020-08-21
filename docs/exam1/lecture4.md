@@ -12,7 +12,7 @@ August 27, 2020
 - 27 Aug - Material Derivative
 - 1 Sep - Conservation and Compatibility, HW2 Due
 - 3 Sep - Polar Decomposition
-- 8 Sep - Exam Review
+- 8 Sep - Exam Review, HW3 Due
 
 ----
 ## outline
