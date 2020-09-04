@@ -10,7 +10,9 @@ Wichita State University, Department of Aerospace Engineering
 ## schedule
 
 - 15 Sep - Stress
-- 17 Sep - Stress
+- 17 Sep - Linear Elasticity
+- 22 Sep - Equations of Motion, HW 4 Due
+- 24 Sep - Elastic Problems
 
 ----
 ## outline
