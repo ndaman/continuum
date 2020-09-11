@@ -1,325 +1,330 @@
-<span>upcoming schedule</span>
+# AE831
+## Continuum Mechanics
+Lecture 8 - Linear Elasticity<br/>
+Dr. Nicholas Smith<br/>
+Wichita State University, Department of Aerospace Engineering
 
-  - 19 Sep - Exam Review, Stress Lecture
+17 September, 2020
 
-  - 24 Sep - Stress Lecture
+----
+## schedule
 
-  - 26 Sep - Elastic Solid, HW4 Due
+- 17 Sep - Linear Elasticity
+- 22 Sep - Equations of Motion, HW 4 Due
+- 24 Sep - Elastic Problems
+- 29 Sep - Elastic Problems, HW 5 Due
 
-  - 1 Oct - Elastic Solid
+---
+## outline
 
-### outline
+<!-- vim-markdown-toc GFM -->
 
-\[sections numbered\]
+* equations of motion
+* energetic conjugates
+* corotational derivative
+* heat, energy, and entropy
+* integral formulation
 
-# exam
+<!-- vim-markdown-toc -->
 
-<span>exam overview</span>
+---
+# equations of motion
 
-  - Before the curve, the class average was 82.8% with a standard
-    deviation of 6.3%
+----
+## reference configuration
 
-  - High score was 90
+- At this point it is desirable to formulate equations of motion in terms of the first and second Piola-Kirchhoff stress tensors
+- Recall for Cauchy stress 
+`\[T_{ij,j} + \rho B_i = \rho a_i\]`
 
-  - After curve the class average is 92.8%, with a standard deviation of
-    6.3%
+- Now we substitute `\(T_{ij} = \frac{1}{J} T_{im}^0F_{jm}\)` to get
+`\[T_{ij,j} = \frac{\partial}{\partial x_j} \left(\frac{1}{J} T_{im}^0F_{jm}\right) = \frac{F_{jm}}{J} \frac{\partial T^0_{im}}{\partial x_j} + T^0_{im} \frac{\partial}{\partial x_j} \frac{F_{im}}{J}= \frac{F_{jm}}{J} \frac{\partial T^0_{im}}{\partial x_j}\]`
 
-  - Curved score is written on exam, you can add up the individual
-    problem scores to get your un-adjusted total
+----
+## reference configuration
 
-# Traction Vector and Stress Tensor
+- Since `\(T_{ij}^0\)` is expressed in terms of the reference configuration, we desire to change the partial derivative from `\(x_j\)` to `\(X_j\)` which we can do as follows
+`\[\frac{\partial T_{ij}}{\partial x_j}\frac{F_{jm}}{J} \frac{\partial T^0_{im}}{\partial x_j} = \frac{1}{J} \frac{\partial x_j}{\partial X_m} \frac{\partial T^0_{im}}{\partial X_n}\frac{\partial X_n}{\partial x_j} = \frac{1}{J} \delta_{mn} \frac{\partial T^0_{im}}{\partial X_n}\]`
 
-<span>some words on notation</span>
+- Substituting this into the equation of motion, and multiplying both sides by `\(J\)` gives
+`\[\frac{\partial T^0_{ij}}{\partial X_j} + J \rho B_i = J \rho a_i\]`
 
-  - This text uses a different notation from what is generally taught in
-    elasticity, but the concepts are identical
+- The quantity `\(J \rho\)` is sometimes written as `\(\rho^0\)`
 
-  - "stress vector" is equivalent to a "traction vector"
+---
+# energetic conjugates
 
-  - The symbol \(T\) used for the stress tensor is equivalent to
-    \(\sigma\) used for the stress tensor in Elasticity
+----
+## work and power
 
-<span>traction</span>
+- Stress and strains are considered *energetically conjugate* if their double-dot product reflects the strain energy
+- Work is defined as force times distance, and power is force time velocity 
+`\[P = \int F_i dv_i\]`
 
-![image](../Figures/traction.PNG)
-<span id="fig:traction" label="fig:traction">\[fig:traction\]</span>
+- If we multiply and divide by the differential volume, we find
+`\[P = \int \frac{F_i}{A_j} \frac{dv_i}{dx_j} dV\]`
 
-<span>traction</span>
+----
+## power
 
-  - The traction vector is defined as
-    \[\hat{t}^n(x,\hat{n}) = \lim\limits_{\Delta A \to 0} \frac{\Delta \hat{f}}{\Delta A}\]
+- Since `\(F_i\)` is the force in the deformed configuration and `\(A_j\)` is the area in the deformed configuration, `\(\frac{F_i}{A_j}\)` is the true stress (Cauchy stress)
+- We also see that `\(\frac{dv_i}{dx_j}\)` is the velocity gradient, so we can re-write as
+`\[P = \int \sigma_{ij} v_{i,j} dV\]`
 
-  - By Newton&rsquo;s third law (action-reaction principle)
-    \[\hat{t}^n(x,\hat{n}) = -\hat{t}^n(x,-\hat{n})\]
+- We also recall that `\(v_{i,j} = D_{ij} + W_{ij}\)`
+`\[P = \int \sigma_{ij} (D_{ij} + W_{ij}) dV\]`
 
-<span>traction</span>
+- But since `\(W_{ij}\)` is anti-symmetric and `\(D_{ij}\)` is symmetric, we have 
+`\[P = \int \sigma_{ij} D_{ij} dV\]`
 
-<span>traction</span>
+- This means that `\(D_{ij}\)` is the energetic conjugate for `\(\sigma_{ij}\)` (text calls this stress power)
 
-  - If we consider the special case where the normal vectors,
-    \(\hat{n}\), align with the coordinate system
-    (\(\hat{e}_1\),\(\hat{e}_2\),\(\hat{e}_3\))
+----
+## deformation gradient
 
-  - On the 1-face: \[\begin{aligned}
-            \hat{n}&=\hat{e}_1: &\quad \hat{t}^n = t_i^{(\hat{e}_1)} \hat{e}_i = t_1^{(\hat{e}_1)} \hat{e}_1 + t_2^{(\hat{e}_1)} \hat{e}_2 + t_3^{(\hat{e}_1)} \hat{e}_3
-            \end{aligned}\]
+- The velocity gradient is an Eulerian property, but we can convert it to Lagrangian using the deformation gradient
+- If we take the time derivative of the deformation gradient we find
+`\[\dot{F_{ij}} = \frac{d}{dt} \left(\frac{\partial x_i}{\partial X_j}\right) = \frac{\partial}{\partial X_j} \left(\frac{dx}{dt}\right) = \frac{\partial v_i}{\partial X_j}\]`
 
-  - On the 2-face: \[\begin{aligned}
-            \hat{n}&=\hat{e}_2: &\quad \hat{t}^n = t_i^{(\hat{e}_2)} \hat{e}_i = t_1^{(\hat{e}_2)} \hat{e}_1 + t_2^{(\hat{e}_2)} \hat{e}_2 + t_3^{(\hat{e}_2)} \hat{e}_3
-            \end{aligned}\]
+- We can now apply the chain rule to find
+`\[\dot{F_{ij}} = \frac{\partial v_i}{\partial X_j} = \left(\frac{\partial v_i}{\partial x_k}\right) \left(\frac{\partial x_k}{\partial X_j}\right)\]`
 
-  - And on the 3-face: \[\begin{aligned}
-            \hat{n}&=\hat{e}_3: &\quad \hat{t}^n = t_i^{(\hat{e}_3)} \hat{e}_i = t_1^{(\hat{e}_3)} \hat{e}_1 + t_2^{(\hat{e}_3)} \hat{e}_2 + t_3^{(\hat{e}_3)} \hat{e}_3
-            \end{aligned}\]
+- We can re-arrange to write the velocity gradient in terms of the
+deformation gradient 
+`\[v_{i,j} = \dot{F_{ik}} F^{-1}_{kj}\]`
 
-<span>stress tensor</span>
+----
+## first piola-kirchhoff
 
-  - To simplify the notation, we introduce the stress tensor
-    \[\sigma_{ij} = t_j^{(\hat{e}_i)}\]
+- If we return to power in terms of stress and the velocity gradient, we can now re-write in terms of the deformation gradient
+`\[P = \int \sigma_{ij} v_{i,j} dV = \int \sigma_{ij} \dot{F_{ik}} F^{-1}_{kj} dV\]`
 
-<span>traction</span>
+- We can also integrate over the reference volume by using `\(dV = J dV_0\)`
+`\[P = \int \sigma_{ij} \dot{F_{ik}} F^{-1}_{kj} J dV_0\]`
 
-  - We can find some interesting information about the traction vector
-    by considering an arbitrary tetrahedron with some traction
-    \(\hat{t}^{(n)}\) applied to the surface
+----
+## first piola-kirchhoff
 
-<span>traction</span>
+- Recall that the first Piola-Kirchhoff stress tensor is given as
+`\[\sigma^0_{ij} = J \sigma_{im}F_{jm}^{-1}\]`
 
-  - If we consider the balance of forces in the \(x_1\)-direction
-    \[t_1 dA - \sigma_{11} dA_1 - \sigma_{21} d A_2 - \sigma_{31} dA_3 + b_1 \rho dV = 0\]
+- Changing indexes, `\(m\)` to `\(j\)` and `\(j\)` to `\(k\)`, we can substitute 
+`\[P = \int \sigma^0_{ik} \dot{F_{ik}} dV_0\]`
 
-  - The area components are: \[\begin{aligned}
-            dA_1 &= n_1 dA\\
-            dA_2 &= n_2 dA\\
-            dA_3 &= n_3 dA\\
-            \end{aligned}\]
+- Thus the material derivative of the deformation gradient is the energetic conjugate for the first piola-kirchhoff stress tensor
 
-  - And \(dV = \frac{1}{3}h dA\).
+----
+## second piola-kirchhoff
 
-<span>traction</span>
-\[t_1 dA - \sigma_{11} n_1 dA - \sigma_{21} n_2 dA - \sigma_{31} n_3 dA + b_1 \rho \frac{1}{3}h dA = 0\]
+- To find the energetic conjugate for the second Piola-Kirchhoff stress tensor, we return to power in terms of Cauchy stress and the deformation rate tensor 
+`\[P = \int \sigma_{ij} D_{ij} dV\]`
 
-  - If we let \(h \to 0\) and divide by \(dA\)
-    \[t_1 = \sigma_{11} n_1 + \sigma_{21} n_2 + \sigma_{31} n_3\]
+- This time we will replace `\(D_{ij}\)` with `\(E_{ij}^*\)`, Consider
+`\[ds^2 = dS^2 + 2dX_i E^*_{ij} dX_j\]`
 
-  - We can write this in index notation as \[t_1 = \sigma_{i1} n_i\]
+- Taking the material derivative of both sides we find
+`\[\frac{D}{Dt} ds^2 = 2dX_i \frac{D E^*_{ij}}{Dt} dX_j\]`
 
-  - We find, similarly \[\begin{aligned}
-            t_2 &= \sigma_{i2} n_i\\
-            t_3 &= \sigma_{i3} n_i\\
-            \end{aligned}\]
+----
+## second piola-kirchhoff
 
-<span>traction</span>
+- But we also know that
+`\[\frac{D}{Dt} ds^2 = 2 dx_i D_{ij} dx_j = 2 F_{im}dX_m D_{ij} F_{jn} dX_n\]`
 
-  - We can further combine these results in index notation as
-    \[t_j = \sigma_{ij} n_i\]
+- Re-arranging terms, we can see that
+`\[\frac{D E^*_{ij}}{Dt} = F_{mi} D_{mn} F_{nj}\]`
 
-  - This means with knowledge of the nine components of \(\sigma_{ij}\),
-    we can find the traction vector at any point on any surface
+- Solving for `\(D_{mn}\)` gives
+`\[D_{ij} = F^{-1}_{mi} \dot{E}^*_{mn} F^{-1}_{nj}\]`
 
-<span>example</span>
+----
+## second piola-kirchhoff
 
-  - Consider a block of material with a uniformly distributed force
-    acting on the 1-face. Find the tractions on an arbitrary interior
-    plane
+- Substituting gives
+`\[P = \int \sigma_{ij} F^{-1}_{mi} \dot{E}^*_{mn} F^{-1}_{nj} J dV_0\]`
 
-<span>example</span>
+- And the second Piola-Kirchhoff tensor in terms of Cauchy stress is
+`\[\tilde{\sigma}_{ij} = J F_{im}^{-1}\sigma_{mn}F_{jn}^{-1}\]`
 
-  - First we consider a vertical cut on the interior 1-face
-    (\(n_i=\langle 1, 0, 0 \rangle\))
+- But since the Cauchy stress tensor is symmetric, we can re-write it as 
+`\[\tilde{\sigma}_{ij} = J F_{im}^{-1}\sigma_{nm}F_{jn}^{-1}\]`
 
-  - Next we represent the force \(P\) as a vector,
-    \(p_i = \langle P, 0, 0 \rangle\)
+- Which we can now substitute to find
+`\[P = \int \tilde{\sigma}_{ij} \dot{E}^*_{ij} dV_0\]`
 
-  - Balancing forces yields \[t_i A - p_i = 0\]
+----
+## examples
 
-  - We find \(t_1 = \frac{P}{A} = \sigma_{11}\),
-    \(t_2 = 0 = \sigma_{12}\) and \(t_3 = 0 = \sigma_{13}\)
+- First let us consider an incompressible rubber specimen in tension
+- Since it is incompressible, the volume must remain constant
+`\[L_0 A_0 = L_f A_f\]`
 
-  - No force is applied in the other directions, so it is trivial to
-    find the rest of the stress tensor \[\sigma_{ij} = \begin{bmatrix}
-            P/A & 0 & 0\\
-            0 & 0 & 0\\
-            0 & 0 & 0
-            \end{bmatrix}\]
+----
+## examples
 
-<span>example</span>
+![corotational example](../images/rotating_true_strain.svg)
 
-  - We can now consider any arbitrary angle of interior cut.
+---
+# corotational derivative
 
-  - The normal for a cut as shown in the diagram will be
-    \(n_i = \langle \cos \theta, \sin \theta, 0 \rangle\).
+----
+## corotational derivative
 
-  - We can again use \(t_j = \sigma_{ij} n_i\) to find \(t_j\) for any
-    angle \(\theta\). \[\begin{aligned}
-            t_1 &= \frac{P}{A} \cos \theta \\
-            t_2 &= 0\\
-            t_3 &= 0
-            \end{aligned}\]
+- Note: textbook addresses co-rotational derivative on pp. 483-486
+- Rigid body rotations can cause problems when taking derivatives
+- In our last example, the stress rotated from the `\(1\)` direction to the `\(2\)` direction, thus we can see that `\(\dot{\sigma_{ij}} \ne 0\)`
+- However, the rate of deformation tensor, `\(D_{ij}\)` is zero because there is no deformation
 
-# linear momentum and static equilibrium
+----
+## material indifference
 
-<span>linear momentum</span>
+- We have many different stress (Cauchy, Piola-Kirchhoff) and strain (right and left Cauchy, Lagrangian, Eulierian) tensors
+- A proper constitutive equation should be invariant under transformation 
+`\[T_{ij}^* = Q_{im}(t) T_{mn} Q_{jn}(t)\]`
 
-  - From the principle of linear momentum, we know that \(F=ma\)
+- This dictates which stress and strain tensors can be related in a constitutive equation
+- We can show that the Right Cauchy-Green strain tensor should not be used with the Cauchy Stress tensor
 
-  - If we consider some internal body force, \(B\), and use the
-    knowledge that tractions on opposing faces must be equal, we find
-    (in Cartesian coordinates) \[T_{ij,j} + \rho B_i = \rho a_i\]
+----
+## corotational derivative
 
-  - These are known as Cauchy&rsquo;s equations of motion
+- In general, the material derivative of a tensor which is material indifferent (also called an objective tensor) is not objective
+- This motivates a new derivative to find the objective rate tensor for an objective tensor
+- We can derive a corotational derivative for stress and strain by considering the most general form of linear materials
+`\[\sigma^0_{ij} = C_{ijkl} E^*_{kl}\]`
 
-  - For a body to be in static equilibrium \(a_i = 0\)
+- Now we substitute the Cauchy stress and solve to find
+`\[\sigma_{ij} = \frac{1}{J} F_{im} C_{mnop} E_{op} F_{jn}\]`
 
-<span>static equilibrium</span>
+----
+## corotational derivative
 
-  - Most of the time, we will deal with bodies which are not in motion,
-    and can use the condition of static equilibrium
-    \[T_{ij,j} + \rho B_i = 0\]
+- If we now take the material derivative we find
+`\[\dot{\sigma}_{ij} = -\frac{\dot{J}}{J^2} F_{im} C_{mnop} E_{op} F_{jn} + \frac{1}{J} \dot{F}_{im} C_{mnop} E_{op} F_{jn} + \frac{1}{J} F_{im} C_{mnop} \dot{E}_{op} F_{jn} + \frac{1}{J} F_{im} C_{mnop} E_{op} \dot{F}_{jn}\]`
 
-  - In some cases, the body forces (usually gravity) are negligible
-    compared with other forces acting on a body
+- We can now substitute several identities, `\(\frac{\dot{J}}{J} = D_{ii}\)`, `\(\dot{F}_{ij} = v_{i,m} F_{mj}\)`,  and `\(\dot{E}^*_{ij} = F_{mi} D_{mn} F_{nj}\)` to find
+`\[\begin{gathered}
+	\dot{\sigma}_{ij} = \frac{1}{J} \left[-D_{kk} F_{im} C_{mnop} E_{op} F_{jn} + v_{i,k}F_{km} C_{mnop} E_{op} F_{jn} + \right.\\
+	\left. F_{im} C_{mnop} F_{ko}D_{kl}F_{lp} F_{jn} + F_{im} C_{mnop} E_{op} F_{kj} v_{n,k}\right]
+\end{gathered}\]`
 
-  - In invariant form, we can write this as
-    \[\text{div} T_{ij} + \rho B_i = \rho a_i\] which is valid in any
-    coordinate system
+----
+## corotational derivative
 
-<span>example</span>
+ - Now we recall to simplify things somewhat
+`\[\dot{\sigma}_{ij} = -D_{kk} \sigma_{ij} + v_{i,k}\sigma_{kj} + \sigma_{ik} v_{j,k} + \frac{1}{J}F_{im} C_{mnop} F_{ko}D_{kl}F_{lp} F_{jn}\]`
 
-  - Is the following stress distribution in static equilibrium?
-    \[T_{ij} = \begin{bmatrix}
-            x_2^2 + \nu (x_1^2 - x_2^2) & -2\nu x_1 x_2 & 0\\
-            -2\nu x_1 x_2 & x_1^2 + \nu (x_2^2 - x_1^2) &  0\\
-            0 & 0 & \nu(x_1^2 + x_2^2)
-            \end{bmatrix}\]
+- This is often written as
+`\[\dot{\sigma}_{ij} -  v_{i,k}\sigma_{kj} - \sigma_{ik} v_{j,k} = -D_{kk} \sigma_{ij} + \frac{1}{J}F_{im} C_{mnop} F_{ko}D_{kl}F_{lp} F_{jn}\]`
 
-<span>boundary conditions</span>
+- The left hand side is called the Lie Derivative, and is usually written as `\(\accentset{\nabla}{\sigma}_{ij}\)`
+- `\(D_{kk} \approx 0\)` in almost all cases, and is usually neglected
+- We also define `\(C^\prime_{ijkl} \equiv  \frac{1}{J}F_{im} F_{jn} C_{mnop} F_{ko} F_{lp}\)` to find
+`\[\accentset{\nabla}{\sigma}_{ij} = C^\prime _{ijkl} D_{kl}\]`
 
-  - In most problems, we don&rsquo;t know anything about the internal
-    stress state, but we do know what is applied on the surface
+----
+## jaumann derivative
 
-  - We apply these as traction boundary conditions, which can be used to
-    find the internal stress tensor
+- For the special case when an object is rotating, but not deforming, we have `\(D_{ij} = 0\)` which gives
+`\[\accentset{\nabla}{\sigma}_{ij} = \dot{\sigma}_{ij} -  v_{i,k}\sigma_{kj} - \sigma_{ik} v_{j,k} = 0\]`
 
-  - If a surface is "free" with no boundary or force constraints, it is
-    a traction-free boundary condition
+- And we can more clearly see the terms which account for `\(\dot{\sigma}_{ij} \ne 0\)`
+- Since `\(D_{ij} = 0\)`, we can also re-write `\(v_{i,j} = D_{ij} + W_{ij} = W_{ij}\)`
+- We also know that `\(W_{ij} = -W_{ji}\)` which leads to the Jaumann derivative
+`\[\mathring{\sigma}_{ij} = \dot{\sigma}_{ij} - W_{ik} \sigma_{kj} + \sigma_{ik} W_{kj}\]`
 
-<span>example</span>
+----
+## example
 
-  - Suppose a cylinder has a variable density given by \(\rho = r^2\)
+- Calculate `\(\dot{\sigma}_{ij}\)` and `\(\mathring{\sigma}_{ij}\)` for an object under constant stress 
+`\[\sigma = \begin{bmatrix}
+	20 & 0 \\ 0 & 0
+\end{bmatrix}\]`
 
-  - Find the state of stress from gravity in these conditions
+- With 2D rotation of 
+`\[R = \begin{bmatrix}
+	\cos \theta &-\sin \theta\\ \sin \theta & \cos \theta
+\end{bmatrix}\]` 
+and 
+`\[\dot{R} = \omega\begin{bmatrix}
+	-\sin \theta & -\cos \theta\\ \cos \theta & -\sin \theta
+\end{bmatrix}\]`
 
-<span>example</span>
+---
+# heat, energy, and entropy
 
-  - There is no traction along the outer surfaces
+----
+## heat
 
-  - Using Cauchy&rsquo;s stress theorem with the normal
-    \(n = \langle 1, 0, 0 \rangle\) we can find \[\begin{aligned}
-            t_j &= \sigma_{ij} n_i\\
-            &= \langle \sigma_{rr}n_r + \sigma_{r\theta} n_\theta + \sigma_{rz} n_z, \sigma_{\theta r}n_r + \sigma_{\theta \theta} n_\theta + \sigma_{\theta z} n_z, \sigma_{zr}n_r + \sigma_{z\theta} n_\theta + \sigma_{zz} n_z\rangle \\
-            &= \langle \sigma_{rr}, \sigma_{\theta r}, \sigma_{z r} \rangle
-            \end{aligned}\]
+- Let `\(q_i\)` be the vector whose magnitude gives the rate of heat flow across a unit area and whose direction indicates the direction of heat flow
+- The net flow of heat into a differential element is
+`\[Q = -q_{i,i} dV\]`
 
-  - And choosing another normal, we find
+- Using the Fourier heat conduction law in steady state conditions we find 
+`\[q_i = -\kappa \nabla \Theta\]`
 
-  - \(\sigma_{r} = \sigma_{r \theta} = \sigma_{\theta} = \sigma_{rz} = \sigma_{\theta_z} = 0\)
+- In steady state conditions, no should be no net rate of heat flow, which produces the governing Laplace equation
+`\[\nabla^2 \Theta = 0\]`
 
-  - We can also find that \(\sigma_z = 0\) at the free surface
+----
+## energy
 
-<span>example</span>
+- If we consider only the energy contributions from strain energy, kinetic energy, and heat
+- by the conservation of energy, the rate of increase in energy for a particle equals the rate of work done plus the heat added
+`\[\frac{D}{Dt}(U + KE) = P + Q_c + Q_s\]`
 
-  - Since gravity only acts in the \(z\)-direction, we make the
-    assumption that all stress functions be functions of \(z\) only
+- Where `\(P = \frac{D}{Dt}(KE) + T_{ij} v_{i,j}dV\)` and `\(Q_c = -q_{i,j}dV\)`
+`\[\frac{D U}{Dt} = T_{ij} v_{i,j}dV -q_{i,j}dV + Q_s\]`
 
-  - To find the stress in the \(z\) direction, we use the third
-    equilibrium equation
-    \[\frac{\partial \tau_{r z}}{\partial r} + \frac{1}{r} \frac{\partial \tau_{\theta z}}{\partial \theta} + \frac{\partial \sigma_z}{\partial z} + \frac{1}{r}\tau_{rz} + \rho B_z = 0\]
+- This is also sometimes written as energy per unit mass as
+`\[\rho \frac{D u }{Dt} = T_{ij} v_{i,j} - q_{i,j} + \rho q_s\]`
 
-  - We can substitute known values to find that
-    \[\frac{\partial \sigma_z}{\partial z} + r^2 g = 0\]
+----
+## entropy inequality
 
-<span>example</span>
+- Let `\(\eta(x_i,t)\)` denote the entropy per unit mass
+- The rate of entropy following a particle is
+`\[\frac{D}{Dt}(\rho \eta dV) = \rho dV \frac{D \eta}{Dt} + \eta \frac{D}{Dt} (\rho dV) = \rho dV \frac{D \eta}{Dt}\]`
 
-  - Since we desire to find the stress at any point, we introduce a
-    variable to indicate the coordinate of our free body diagram cut
+- The entropy inequality states that the rate of increase of entropy is always greater than or equal to the entropy inflow plus the entropy supply
+`\[\rho \frac{D \eta}{Dt} \ge -\text{div} \left(\frac{q}{\Theta}\right) + \frac{\rho q_s}{\Theta}\]`
 
-<span>example</span>
+----
+## helmholtz energy function
 
-  - We integrate over this free body to find \[\begin{aligned}
-            \sigma_z &=  -\int_L^z r^2 g dz\\
-            &= r^2 g (L-z)
-            \end{aligned}\]
+- The Helmholtz energy function is defined as 
+`\[A = u - \Theta \eta\]`
 
-  - In this case, the stress is a function of radial distance (just like
-    the body force was)
+- We can use this relationship to re-write the entropy inequality as
+`\[-\left(\rho \frac{D A}{Dt} + \rho\eta \frac{D \Theta}{Dt}\right) + T_{ij}D_{ij}-\frac{q_i}{\Theta}\frac{\partial \Theta}{\partial x_i} \ge 0\]`
 
-# piola kirchoff stress tensors
+---
+# integral formulation
 
-<span>piola kirchoff stress tensors</span>
+----
+## integral formulation
 
-  - The Cauchy stress tensor is based on the differential area at the
-    current position (deformed state)
+- To this point, we have derived field equations using the differential element approach (this is sometimes referred to as local principles)
+- When can also formulate these principles globally by integrating over the volume. If the functions are smooth, these two methods will be equivalent
+- In certain problems the integral formulation may be more convenient, or more numerically accurate when solving problems numerically
 
-  - The first and second Piola Kirchoff stress tensors are based on the
-    undeformed area
+----
+## conservation of mass
 
-  - Equations of motion can be formulated in either the deformed or
-    un-deformed configuration, based on which is more convenient for a
-    given problem
+- The conservation of mass states that the rate of increase of mass in a fixed part of a material is zero 
+`\[\begin{aligned}
+	\frac{D}{Dt} \int_{V_m} \rho dV &= 0\\
+	\int_{V_m} \frac{D}{Dt} (\rho dV) &= 0\\
+	\int_{V_m} dV \frac{D}{Dt}\rho + \rho \frac{D}{Dt} dV &= 0
+\end{aligned}\]`
 
-  - For large deformation problems, whether the rate of deformation
-    tensor \(D_{ij}\), \(D F_{ij}/ Dt\), or \(D E_{ij}^*/Dt\) is used
-    facilitates the use of Cauchy or one of the Piola Kirchoff Stress
-    tensors
+----
+## conservation of mass
 
-<span>first piola kirchoff stress tensor</span>
+- We previously found that `\(D_{ii}\)` is related to the rate of change of the volume, which we can write in terms of the velocity gradient as `\[\frac{D dV}{Dt} = v_{i,i} dV\]`
+- We can substitute this to find
+`\[\int_{V_m} dV \frac{D}{Dt}\rho + \rho v_{i,i} dV = 0\]`
 
-  - For the first Piola Kirchoff stress tensor (also known as the
-    Lagrangian stress tensor), we let \[df_i = t^0_i dA^0\]
+- Since this must be true for any volume, we find
+`\[\frac{D}{Dt}\rho + \rho v_{i,i} = 0\]`
 
-  - Note that \(t^0_i\) is a pseudo traction vector, and does not
-    describe the actual intensity of \(df_i\), which is acting on the
-    deformed area
-
-  - Also note that since \(df_i\) is the acting on the deformed area,
-    \(t^0_i\) acts in the same direction as \(t_i\)
-
-  - We can now formulate the stress tensor in the same way as the Cauchy
-    stress tensor \[t^0_i = T^0_{ij}n^0_j\]
-
-<span>first piola kirchoff stress tensor</span>
-
-  - We can also relate the first Piola-Kirchoff stress tensor to the
-    Cauchy stress tensor
-
-  - \[T^0_{ij} = J T_{im}F_{jm}^{-1}\]
-
-  - And the inverse relationship is
-    \[T_{ij} = \frac{1}{J}T^0_{im}F_{jm}\]
-
-  - In general, the first Piola-Kirchoff stress tensor is not symmetric
-
-<span>second piola kirchoff stress tensor</span>
-
-  - If instead we consider a pseudo-differential force acting on the
-    un-deformed area \[d\tilde{f}_i = \tilde{t}_i dA^0\] where
-    \[df_i = F_{ij}d\tilde{f}_j\]
-
-  - In general, the traction vector \(\tilde{t}_i\) is in a different
-    direction that \(t_i\) and \(t^0_i\)
-
-  - Once again, we can formulate the second Piola-Kirchoff stress tensor
-    as the others \[\tilde{t}_i = \tilde{T}_{ij}n^0_j\]
-
-<span>second piola kirchoff stress tensor</span>
-
-  - We can easily relate the Second and First Piola Kirchoff stress
-    tensors \[\tilde{T}_{ij} = F_{im}^{-1}T^0_{mj}\]
-
-  - We can now substitute to relate the Second Piola Kirchoff stress
-    tensor to the Cauchy stress tensor
-    \[\tilde{T}_{ij} = J F_{im}^{-1}T_{mn}F_{jn}^{-1}\]
-
-  - For a symmetric stress tensor, \(T_{ij}\), the Second Piola Kirchoff
-    stress tensor is symmetric

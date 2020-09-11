@@ -1,20 +1,30 @@
 # AE831
 ## Continuum Mechanics
-Lecture 7 - Stress<br/>
+Lecture 8 - Piola Kirchoff Stress<br/>
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
 
-15 September, 2020
+17 September, 2020
 
 ----
 ## schedule
 
-- 15 Sep - Stress
 - 17 Sep - Linear Elasticity
 - 22 Sep - Equations of Motion, HW 4 Due
 - 24 Sep - Elastic Problems
 
 ----
+## upcoming schedule
+
+  - 19 Sep - Exam Review, Stress Lecture
+
+  - 24 Sep - Stress Lecture
+
+  - 26 Sep - Elastic Solid, HW4 Due
+
+  - 1 Oct - Elastic Solid
+
+---
 ## outline
 
 <!-- vim-markdown-toc GFM -->
@@ -52,12 +62,10 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## traction
 
-![traction vector](../images/tractionvector.svg)
-
 ----
 ## traction
 
-- If we consider the special case where the normal vectors, `\(\hat{n}\)`, align with the coordinate system (`\(\hat{e}_1\)`,`\(\hat{e}_2\)`,`\(\hat{e}_3\))`
+- If we consider the special case where the normal vectors, `\(\hat{n}\)`, align with the coordinate system (`\(\hat{e}_1\)`,\(\hat{e}_2\),\(\hat{e}_3\))
 - On the 1-face: 
 `\[\begin{aligned}
 	\hat{n}&=\hat{e}_1: &\quad \hat{t}^n = t_i^{(\hat{e}_1)} \hat{e}_i = t_1^{(\hat{e}_1)} \hat{e}_1 + t_2^{(\hat{e}_1)} \hat{e}_2 + t_3^{(\hat{e}_1)} \hat{e}_3
@@ -79,14 +87,10 @@ Wichita State University, Department of Aerospace Engineering
 - To simplify the notation, we introduce the stress tensor
 `\[\sigma_{ij} = t_j^{(\hat{e}_i)}\]`
 
-![stress tensor](../images/stresstensor.svg)
-
 ----
 ## traction
 
 - We can find some interesting information about the traction vector by considering an arbitrary tetrahedron with some traction `\(\hat{t}^{(n)}\)` applied to the surface
-
-![cauchy's theorem](../images/cauchy.svg)
 
 ----
 ## traction
@@ -98,8 +102,8 @@ Wichita State University, Department of Aerospace Engineering
 `\[\begin{aligned}
 	dA_1 &= n_1 dA\\
 	dA_2 &= n_2 dA\\
-	dA_3 &= n_3 dA\\
-\end{aligned}\]`
+ 	dA_3 &= n_3 dA\\
+ \end{aligned}\]`
 
 - And `\(dV = \frac{1}{3}h dA\)`.
 
@@ -133,8 +137,6 @@ Wichita State University, Department of Aerospace Engineering
 
 - Consider a block of material with a uniformly distributed force acting on the 1-face. Find the tractions on an arbitrary interior plane
 
-![2d example](../images/traction2d.svg)
-
 ----
 ## example
 
@@ -144,7 +146,6 @@ Wichita State University, Department of Aerospace Engineering
 `\[t_i A - p_i = 0\]`
 
 - We find `\(t_1 = \frac{P}{A} = \sigma_{11}\)`, `\(t_2 = 0 = \sigma_{12}\)` and `\(t_3 = 0 = \sigma_{13}\)`
-
 - No force is applied in the other directions, so it is trivial to find the rest of the stress tensor 
 `\[\sigma_{ij} = \begin{bmatrix}
 	P/A & 0 & 0\\
@@ -157,7 +158,8 @@ Wichita State University, Department of Aerospace Engineering
 
 - We can now consider any arbitrary angle of interior cut.
 - The normal for a cut as shown in the diagram will be `\(n_i = \langle \cos \theta, \sin \theta, 0 \rangle\)`.
-- We can again use `\(t_j = \sigma_{ij} n_i\)` to find `\(t_j\)` for any angle `\(\theta\)`. 
+
+- We can again use `\(t_j = \sigma_{ij} n_i\)` to find \(t_j\) for any angle `\(\theta\)`. 
 `\[\begin{aligned}
 	t_1 &= \frac{P}{A} \cos \theta \\
 	t_2 &= 0\\
@@ -171,9 +173,7 @@ Wichita State University, Department of Aerospace Engineering
 ## linear momentum
 
 - From the principle of linear momentum, we know that `\(F=ma\)`
-- If we consider some internal body force, `\(B\)`, and use the knowledge that tractions on opposing faces must be equal, we find (in Cartesian coordinates) 
-`\[T_{ij,j} + \rho B_i = \rho a_i\]`
-
+- If we consider some internal body force, `\(B\)`, and use the knowledge that tractions on opposing faces must be equal, we find (in Cartesian coordinates) `\[T_{ij,j} + \rho B_i = \rho a_i\]`
 - These are known as Cauchy's equations of motion
 - For a body to be in static equilibrium `\(a_i = 0\)`
 
@@ -186,7 +186,6 @@ Wichita State University, Department of Aerospace Engineering
 - In some cases, the body forces (usually gravity) are negligible compared with other forces acting on a body
 - In invariant form, we can write this as
 `\[\text{div} T_{ij} + \rho B_i = \rho a_i\]` 
-
 which is valid in any coordinate system
 
 ----
@@ -202,7 +201,7 @@ which is valid in any coordinate system
 ----
 ## boundary conditions
 
-- In most problems, we don't know anything about the internal stress state, but we do know what is applied on the surface
+- In most problems, we don&rsquo;t know anything about the internal stress state, but we do know what is applied on the surface
 - We apply these as traction boundary conditions, which can be used to find the internal stress tensor
 - If a surface is "free" with no boundary or force constraints, it is a traction-free boundary condition
 
@@ -211,7 +210,6 @@ which is valid in any coordinate system
 
 - Suppose a cylinder has a variable density given by `\(\rho = r^2\)`
 - Find the state of stress from gravity in these conditions
-![example](../images/gravityexample.svg)
 
 ----
 ## example
@@ -232,6 +230,7 @@ which is valid in any coordinate system
 ## example
 
 - Since gravity only acts in the `\(z\)`-direction, we make the assumption that all stress functions be functions of `\(z\)` only
+
 - To find the stress in the `\(z\)` direction, we use the third equilibrium equation
 `\[\frac{\partial \tau_{r z}}{\partial r} + \frac{1}{r} \frac{\partial \tau_{\theta z}}{\partial \theta} + \frac{\partial \sigma_z}{\partial z} + \frac{1}{r}\tau_{rz} + \rho B_z = 0\]`
 
@@ -263,7 +262,7 @@ which is valid in any coordinate system
 - The Cauchy stress tensor is based on the differential area at the current position (deformed state)
 - The first and second Piola Kirchoff stress tensors are based on the undeformed area
 - Equations of motion can be formulated in either the deformed or un-deformed configuration, based on which is more convenient for a given problem
-- For large deformation problems, whether the rate of deformation tensor `\(D_{ij}\)`, `\(D F_{ij}/ Dt\)` , or `\(D E_{ij}^*/Dt\)` is used facilitates the use of Cauchy or one of the Piola Kirchoff Stress tensors
+- For large deformation problems, whether the rate of deformation tensor `\(D_{ij}\)`, `\(D F_{ij}/ Dt\)`, or `\(D E_{ij}^*/Dt\)` is used facilitates the use of Cauchy or one of the Piola Kirchoff Stress tensors
 
 ----
 ## first piola kirchoff stress tensor
@@ -280,7 +279,6 @@ which is valid in any coordinate system
 ## first piola kirchoff stress tensor
 
 - We can also relate the first Piola-Kirchoff stress tensor to the Cauchy stress tensor
-
 `\[T^0_{ij} = J T_{im}F_{jm}^{-1}\]`
 
 - And the inverse relationship is
@@ -296,7 +294,6 @@ which is valid in any coordinate system
 `\[df_i = F_{ij}d\tilde{f}_j\]`
 
 - In general, the traction vector `\(\tilde{t}_i\)` is in a different direction that `\(t_i\)` and `\(t^0_i\)`
-
 - Once again, we can formulate the second Piola-Kirchoff stress tensor as the others 
 `\[\tilde{t}_i = \tilde{T}_{ij}n^0_j\]`
 
