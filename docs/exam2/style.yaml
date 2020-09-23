@@ -1,0 +1,20 @@
+---
+aspectratio: 43
+theme: metropolis
+classoption:
+  - handout
+  - 12pt
+papersize: letter
+output:
+	pdf_document:
+		latex_engine: xelatex
+header-includes: |
+  \usepackage{pgfpages}
+  \pgfpagesuselayout{2 on 1}
+  \providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  \makeatletter
+  \makeatother
+  \let\Oldincludegraphics\includegraphics
+  \renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{#2}}
+---
