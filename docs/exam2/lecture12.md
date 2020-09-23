@@ -14,7 +14,7 @@ Wichita State University, Department of Aerospace Engineering
 - 6 Oct - Elastic Solid
 - 8 Oct - Elastic Solid
 
----
+----
 ## outline
 
 <!-- vim-markdown-toc GFM -->
@@ -47,6 +47,10 @@ Wichita State University, Department of Aerospace Engineering
     2.  Load rate/strain rate do not change results
     3.  Completely elastic
     4.  Small deformations
+
+----
+## linear elasticity
+
 - In this case we can use Hooke's Law
 `\[T_{ij} = C_{ijkl} E_{kl}\]`
 
@@ -62,6 +66,9 @@ Wichita State University, Department of Aerospace Engineering
 - A fourth-order isotropic tensor can be written as
 `\[C_{ijkl} = \lambda \delta_{ij} \delta_{kl} + \alpha \delta_{ik} \delta_{jl} + \beta \delta_{il}\delta_{jk}\]`
 
+----
+## isotropic tensor
+
 - If we substitute this into Hooke's Law
 `\[T_{ij} = \lambda E_{kk} \delta_{ij} + (\alpha + \beta) E_{ij}\]`
 
@@ -76,6 +83,9 @@ which is often written as
 - They are purely mathematical, but we can relate them to physical parameters
 - We can solve Hooke's Law for `\(E_{ij}\)` to find
 `\[E_{ij} = \frac{1}{2\mu} \left[T_{ij} - \frac{\lambda}{3\lambda + 2\mu}T_{kk}\delta_{ij}\right]\]`
+
+----
+## lamé constants
 
 - If we consider a state of uniaxial stress (as in a simple tension test) we find
 `\[\begin{aligned}
@@ -108,6 +118,10 @@ which is often written as
 - If we consider a stress state of pure shear, we see that `\(E_{12} = \frac{1}{2\mu} T_{12}\)` is the only non-zero equation from Hooke' Law
 - The shear modulus is defined as `\(G = \frac{\tau}{2E_{12}}\)`, so we see that `\(\mu = G\)`
 - Finally consider a state of hydrostatic stress, where `\(T_{ij} = \sigma \delta_{ij}\)`
+
+----
+## lamé constants
+
 - Taking the contraction of Hooke's Law, we see that
 `\[E_{ii} = e = \frac{3\sigma}{2\mu + 3\lambda}\]`
 
@@ -120,7 +134,7 @@ which is often written as
 # equations of motion
 
 ----
-## infinitesimal deformation
+## small deformation
 
 - For infinitesimal deformations, `\(x_i \approx X_i\)`, so we find that
 `\[a_i = \frac{\partial ^2 u_i}{\partial t^2}\]`
@@ -129,7 +143,7 @@ which is often written as
 `\[\rho_0 \frac{\partial ^2 u_i}{\partial t^2} = \rho_0 B_i T_{ij,j}\]`
 
 ----
-## navier equations of motion
+## navier's equations 
 
 - Navier's equations use Hooke's Law and the strain displacement relations to re-write the equations of motion in terms of displacement only
 - First we re-write Hooke's Law in terms of displacement
@@ -138,7 +152,7 @@ which is often written as
 - Where `\(e\)` is the dilatation, or change in volume
 
 ----
-## navier equations of motion
+## navier's equations 
 
 - Now we note a couple of things when we take `\(T_{ij,j}\)`
 
@@ -146,6 +160,8 @@ which is often written as
 
 `\[\frac{\partial e}{\partial x_j} \delta_{ij} = \frac{\partial e}{\partial x_j}\]`
 
+----
+## navier's equations
 - Since order of differentiation does not matter, we can write
 `\[\frac{\partial u_j}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_i} \left( \frac{\partial u_j}{\partial x_j}\right) = \frac{\partial e}{\partial x_i}\]`
 
@@ -153,7 +169,7 @@ which is often written as
 `\[\rho_0 \frac{\partial^2 u_i}{\partial t^2} = \rho_0 B_i + (\lambda + \mu) \frac{\partial e}{\partial x_i} + \mu \frac{\partial^2 u_i}{\partial x_j \partial x_j}\]`
 
 ----
-## principle of superposition
+## superposition
 
 - Since Hooke's Law and the strain displacement relations are linear, we can add two separate solutions
 
@@ -197,6 +213,9 @@ which is often written as
 - We can then find the displacements as
 `\[u_i = \langle \alpha(x_1), 0, 0 \rangle \times \langle x_1, x_2, x_3 \rangle = \alpha(x_1) \langle 0, -x_3, x_2 \rangle\]`
 
+----
+## torsion of a cylinder
+
 - We can now find the non-zero strain components
 `\[E_{12} = E_{21} = -\frac{1}{2} x_3 \frac{d\alpha}{dx_1}\]`
 `\[E_{13} = E_{31} = \frac{1}{2} x_2 \frac{d\alpha}{dx_1}\]`
@@ -219,6 +238,9 @@ which is often written as
 	-\mu x_3 \frac{d^2\alpha}{dx_1^2} &= 0\\
 	\mu x_2 \frac{d^2\alpha}{dx_1^2} &= 0
 \end{aligned}\]`
+
+----
+## torsion of a cylinder
 
 - The only way for this to be satisfied for all `\(x_2\)` and `\(x_3\)` is if 
 `\[\frac{d \alpha}{dx_1} = \alpha^\prime = \text{constant}\]`
@@ -250,6 +272,9 @@ which is often written as
 - For non-circular cross-sections, we assume that planar cross-sections will also undergo some warping
 `\[u_i = \langle \phi(x_2,x_3), -\alpha(x_1)x_3, \alpha(x_1)x_2 \rangle\]`
 
+----
+## torsion of a cylinder
+
 - The second and third equilibrium equations remain the same, but the first equation becomes
 `\[\nabla^2 \phi = \frac{\partial^2 \phi}{\partial x_2^2} + \frac{\partial ^2 \phi}{\partial x_3^2} = 0\]`
 
@@ -257,7 +282,7 @@ which is often written as
 `\[t_1 = 0 = \mu \left[\alpha^\prime (-n_2 x_3 + n_3 x_2) + \frac{d\phi}{dn}\right]\]`
 
 ----
-## prandtl's torsion formulation
+## prandtl's torsion 
 
 - Prandtl formulated the torsion problem with a stress function
 - He assumed stress in the form 
@@ -267,6 +292,10 @@ which is often written as
 \end{aligned}\]`
 
 - With all other `\(T_{ij} = 0\)`
+
+----
+## prandtl's torsion
+
 - To satisfy equilibrium we have
 `\[\frac{\partial}{\partial x_2} \frac{\partial \psi}{\partial x_3} - \frac{\partial}{\partial x_3} \frac{\partial \psi}{\partial x_2} = 0\]`
 
