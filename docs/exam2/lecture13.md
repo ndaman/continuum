@@ -33,6 +33,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - If motion in any one direction (for example `\(x_3\)`) is restricted, such that `\(u_3 = 0\)`, a body is said to be in a state of plane strain
 - The plane strain is often used for very thick materials, where `\(u_3 \ll u_1, u_2\)`, but is also applicable any time `\(u_3\)` is restricted
+
+----
+## plane strain
+
 - Under plane strain conditions we have 
 `\[\begin{aligned}
 	E_{13} &= E_{23} = E_{33} = 0\\
@@ -48,6 +52,10 @@ Wichita State University, Department of Aerospace Engineering
 `\[T_{33} = \nu (T_{11} + T_{22})\]`
 
 - While the other stress components, `\(T_{11}\)`, `\(T_{12}\)` and `\(T_{22}\)` are all functions of `\(x_1\)` and `\(x_2\)`
+
+----
+## plane strain
+
 - In the absence of body forces, we find the equilibrium equations as
 `\[\begin{aligned}
 	\frac{\partial T_{11}}{\partial x_1} + \frac{\partial T_{12}}{\partial x_2} &= 0\\
@@ -60,6 +68,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - For very thin bodies, we often make the assumption that `\(\sigma_{13} = \sigma_{23} = \sigma_{33} = 0\)`
 - Since we have started from an assumption in stress instead of displacement, it is not yet apparent whether this stress field is allowable
+
+----
+## plane stress
+
 - To simplify calculations for equilibrium and compatibility, we define a stress function, `\(\varphi\)` such that 
 `\[\begin{aligned}
 	\sigma_{11} &= \varphi_{,22}\\
@@ -79,6 +91,9 @@ Wichita State University, Department of Aerospace Engineering
 - We will not follow all the details, but from compatibility we find
 `\[\varphi = \varphi_0(x_1,x_2) - \frac{\nu}{1+\nu}\Psi(x_1,x_2)\frac{1}{2}x_3^2\]`
 
+----
+## plane stress
+
 - For plane stress problems, we generally consider the case where `\(x_3 \ll x_1, x_2\)`, and thus we can neglect the second term, giving our stresses as functions of `\(x_1\)` and `\(x_2\)` only
 - Note that in general plane stress solutions only approximately satisfy compatibility
 
@@ -89,6 +104,10 @@ Wichita State University, Department of Aerospace Engineering
 - This is known as the Beltrami-Mitchell equations
 - For planar problems, the Beltrami-Mitchell equations are
 `\[\nabla^2 (\sigma_{11} + \sigma_{22}) = -\frac{4\rho}{1+\kappa} \left(b_{1,1} + b_{2,2}\right)\]`
+
+
+----
+## beltrami-mitchell
 
 - `\(\kappa\)` is used to differentiate between plane strain and plane stress
 `\[\kappa=\begin{cases}
@@ -146,11 +165,15 @@ Wichita State University, Department of Aerospace Engineering
 `\[\varphi = \varphi_c + \varphi_p\]`
 
 - Where the complementary solution is a bi-harmonic function, while the particular solution depends on the body force
+
+----
+## airy stress
+
 - Note: written in this manner the airy stress function is equally valid in polar or Cartesian coordinates, but note that
 `\[\nabla^2 = \frac{\partial ^2}{\partial r^2} + \frac{1}{r} \frac{\partial }{\partial r} + \frac{1}{r^2} \frac{\partial^2}{\partial \theta^2}\]`
 
 ----
-## airy stress function solutions
+## airy solutions
 
 - To solve a problem using Airy stress functions, we need to solve this biharmonic equation
 `\[\frac{\partial^4 \phi}{\partial x^4} + 2\frac{\partial^4 \phi}{\partial x^2 \partial y^2} + \frac{\partial^4 \phi}{\partial y^4} = 0\]`
@@ -205,6 +228,10 @@ Wichita State University, Department of Aerospace Engineering
 - Any periodic function with period `\(2L\)` can be represented as
 `\[f(x) = \frac{1}{2}a_0 + \sum_{n=1}^{\infty} \left(a_n \cos \frac{n \pi x}{L} + b_n \sin \frac{n \pi x}{L}\right)\]`
 
+
+----
+## fourier methods
+
 - Where 
 `\[\begin{aligned}
 	a_n &= \frac{1}{L} \int_{-L}^L f(\xi) \cos \frac{n \pi \xi}{L} d\xi & n = 0,1,2, ...\\
@@ -241,7 +268,7 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## polar coordinates
 
-![image](../images/polar_table.PNG)
+![image](../images/polar_table.PNG) <!-- .element width="70%" -->
 
 ---
 # examples
@@ -261,6 +288,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - Locally along the ends, there will be some tractions in order to apply the bending moment
 - These tractions will cancel out, however, so we can use Saint Venant's principle to avoid modeling them explicitly
+
+----
+## example
+
 `\[\begin{aligned}
 	\sigma_y (x, \pm c) &= 0\\
 	\tau_{xy} (x, \pm c) &= \tau_{xy} (\pm L, y) = 0\\
