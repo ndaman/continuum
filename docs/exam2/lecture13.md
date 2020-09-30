@@ -10,9 +10,9 @@ Wichita State University, Department of Aerospace Engineering
 ## schedule
 
 - 1 Oct - Airy Stress
-- 6 Oct - Elastic Solid
-- 8 Oct - Elastic Solid
-- 13 Oct - Exam Review
+- 6 Oct - Anisotropy
+- 8 Oct - Large Deformation
+- 13 Oct - Anisotropy and Large Deformation
 
 ----
 ## outline
