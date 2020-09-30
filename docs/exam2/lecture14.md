@@ -130,32 +130,15 @@ Wichita State University, Department of Aerospace Engineering
 
 - We can follow the exact same procedure to transform strain
 - The values are almost the same, notice the highlighted terms
-`\[R_\epsilon = \begin{bmatrix}
-	Q_{11}^2 & Q_{12}^2 & Q_{13}^2 & %
-	d!50}{$\displaystyle Q_{12}Q_{13}$} &  %
-	d!50}{$\displaystyle Q_{11} Q_{13}$} & %
-	d!50}{$\displaystyle Q_{11}Q_{12}$}\\
-	Q_{21}^2 & Q_{22}^2 & Q_{23}^2 & %
-	d!50}{$\displaystyle Q_{22}Q_{23}$} &  %
-	d!50}{$\displaystyle Q_{21} Q_{23}$} & %
-	d!50}{$\displaystyle Q_{21}Q_{22}$}\\
-	Q_{31}^2 & Q_{32}^2 & Q_{33}^2 & %
-	d!50}{$\displaystyle Q_{32}Q_{33}$} &  %
-	d!50}{$\displaystyle Q_{31} Q_{33}$} & %
-	d!50}{$\displaystyle Q_{31}Q_{32}$}\\
-	%
-	d!50}{$\displaystyle 2Q_{21}Q_{31}$} & %
-	d!50}{$\displaystyle 2Q_{22}Q_{32}$} & %
-	d!50}{$\displaystyle 2Q_{23}Q_{33}$} & Q_{23}Q_{32} + Q_{22}Q_{33} & Q_{23}Q_{31} + Q_{21}Q_{33} & Q_{22}Q_{31} + Q_{21}Q_{32}\\
-	%
-	d!50}{$\displaystyle 2Q_{11}Q_{31}$} & %
-	d!50}{$\displaystyle 2Q_{12}Q_{32}$} & %
-	d!50}{$\displaystyle 2Q_{13}Q_{33}$} & Q_{13}Q_{32} + Q_{12}Q_{33} & Q_{13}Q_{31} + Q_{11}Q_{33} & Q_{12}Q_{31} + Q_{11}Q_{32}\\
-	%
-	\colorbox{red!50}{$\displaystyle 2Q_{11}Q_{21}$} & %
-	\colorbox{red!50}{$\displaystyle 2Q_{12}Q_{22}$} & %
-	\colorbox{red!50}{$\displaystyle 2Q_{13}Q_{23}$} & Q_{13}Q_{22} + Q_{12}Q_{23} & Q_{13}Q_{21} + Q_{11}Q_{23} & Q_{12}Q_{21} + Q_{11}Q_{22}
-\end{bmatrix}\]`
+`\[ R_\epsilon = \begin{bmatrix}
+	Q_{11}^2 & Q_{12}^2 & Q_{13}^2 & \colorbox[yellow]{Q_{12}Q_{13}} &  \colorbox[yellow]{Q_{11} Q_{13}} & \colorbox[yellow]{Q_{11}Q_{12}}\\
+	Q_{21}^2 & Q_{22}^2 & Q_{23}^2 & \colorbox[yellow]{Q_{22}Q_{23}} &  \colorbox[yellow]{Q_{21} Q_{23}} & \colorbox[yellow]{Q_{21}Q_{22}}\\
+	Q_{31}^2 & Q_{32}^2 & Q_{33}^2 & \colorbox[yellow]{Q_{32}Q_{33}} &  \colorbox[yellow]{Q_{31} Q_{33}} & \colorbox[yellow]{Q_{31}Q_{32}}\\
+	\colorbox[yellow]{2Q_{21}Q_{31}} & \colorbox[yellow]{2Q_{22}Q_{32}} & \colorbox[yellow]{2Q_{23}Q_{33}} & Q_{23}Q_{32} + Q_{22}Q_{33} & Q_{23}Q_{31} + Q_{21}Q_{33} & Q_{22}Q_{31} + Q_{21}Q_{32}\\
+	\colorbox[yellow]{2Q_{11}Q_{31}} & \colorbox[yellow]{2Q_{12}Q_{32}} & \colorbox[yellow]{2Q_{13}Q_{33}} & Q_{13}Q_{32} + Q_{12}Q_{33} & Q_{13}Q_{31} + Q_{11}Q_{33} & Q_{12}Q_{31} + Q_{11}Q_{32}\\
+	\colorbox[yellow]{2Q_{11}Q_{21}} & \colorbox[yellow]{2Q_{12}Q_{22}} & \colorbox[yellow]{2Q_{13}Q_{23}} & Q_{13}Q_{22} + Q_{12}Q_{23} & Q_{13}Q_{21} + Q_{11}Q_{23} & Q_{12}Q_{21} + Q_{11}Q_{22}
+\end{bmatrix}
+\]`
 
 ----
 ## stiffness transformation
