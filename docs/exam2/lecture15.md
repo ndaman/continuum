@@ -37,7 +37,7 @@ Wichita State University, Department of Aerospace Engineering
 	C_{11} u_{1,11} + C_{66} u_{1,22} + C_{16} (2u_{1,12} + u_{2,11}) + C_{26} u_{2,22} + (C_{12}+C_{66})u_{2,12} &=0\\
 	C_{16} u_{1,11} + C_{26} u_{1,22} + (C_{66} + C_{12}) u_{1,12} + C_{66} u_{2,11} + C_{22}u_{2,22} + 2C_{26}u_{2,12} &=0\\
 	C_{15} u_{1,11} + C_{46} u_{1,22} + (C_{56} + C_{14})u_{1,12} + C_{56}u_{2,11} + C_{24} u_{2,22} + (C_{25}+C_{46})u_{2,12} &=0
-\end{aligned}\]`
+\end{aligned}\]` <!-- .element position: relative, left: "-30%" -->
 
 ----
 ## planar problems
@@ -53,6 +53,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - Stroh developed a complex variable representation for generalized plane strain solutions in anisotropic materials
 - If we assume a displacement field in the form `\(u_i = a_i f(z)\)` where `\(z = x_1 + px_2\)` the equilibrium equations in terms of displacement then become `\[C_{ijkl} u_{k,il} = 0\]`
+
+----
+## stroh representation
+
 - Since `\(\partial z/ \partial x_i = \delta_{i1} + p \delta_{i2}\)`, we find that
 `\[u_{k,l} = a_k (\delta_{l1} + p \delta_{l2})f^\prime(z) \qquad u_{k,il} = a_k(\delta_{l1 + p\delta_{l2}})(\delta_{j1} + p\delta_{j2})f^{\prime\prime}(z)\]`
 
@@ -77,11 +81,15 @@ Wichita State University, Department of Aerospace Engineering
 	C_{16} & C_{12} & C_{14}\\
 	C_{66} & C_{26} & C_{46}\\
 	C_{56} & C_{25} & C_{45}
-\end{bmatrix} \qquad T = \begin{bmatrix}
+\end{bmatrix} \\
+T = \begin{bmatrix}
 	C_{66} & C_{26} & C_{46}\\
 	C_{26} & C_{22} & C_{24}\\
 	C_{46} & C_{24} & C_{44}
 \end{bmatrix}\]`
+
+----
+## stroh representation
 
 - we can now re-write the equilibrium equations in matrix form as
 `\[a=0\]`
@@ -93,11 +101,15 @@ Wichita State University, Department of Aerospace Engineering
 
 - Mathematically, it can be shown that for a material with physically admissible elastic constants, `\(p\)` will always be complex
 - There will be three pairs of solutions `\((p,\bar{p})\)`, and three pairs of complex-valued eigenvectors, `\((a_i,\bar{a_i})\)`
+
+----
+## stroh representation
+
 - Stress solutions can be calculated by defining `\(b_i\)` vectors
 `\[a^{(i)} = b^{(i)}\]`
 
 - Which gives stress solutions as
-    `\[\sigma_{i1} = -pb_if^\prime(z) \qquad \sigma_{i2} = b_i f^\prime(z)\]`
+`\[\sigma_{i1} = -pb_if^\prime(z) \qquad \sigma_{i2} = b_i f^\prime(z)\]`
 
 ---
 # large deformation
@@ -107,6 +119,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - For small deformations, the current and deformed frame have negligible differences
 - For large deformations, we need to ensure that our constitutive law is objective, or frame-indifferent
+
+----
+## change of frame
+
 - Examples:
 	- distance between two material points is a frame-indifferent scalar
 	- speed of a material point is not frame-independent (non-objective)
@@ -119,6 +135,9 @@ Wichita State University, Department of Aerospace Engineering
 - In general, a "frame" can have its own time scale, origin, and directionality
 - a change of frame would then be given by
 `\[x_i^* = c_i(t) + Q_{ij}(t)(x_j-x^{0}_j)\]`
+
+----
+## change of frame
 
 - If we consider the position vector of two material points, in the starred frame we have
 `\[x_1^* = c(t) + Q(t)(x_1-x_0) \qquad x_2^* = c(t) + Q(t)(x_2-x_0)\]`
@@ -136,6 +155,9 @@ Wichita State University, Department of Aerospace Engineering
 
 - Since both `\(b\)` and `\(c\)` are objective vectors, we can write
 `\[c_i^* = Q_{ik} c_k = Q_{ik} T_{kj} b_j = Q_{ik} T_{kj} Q_{lj} b_l\]`
+
+----
+## change of frame
 
 - This means that for `\(T_{ij}\)` to be objective it must satisfy
 `\[T_{ij}^* = Q_{ik} T_{kl} Q_{jl}\]`
@@ -176,6 +198,9 @@ Wichita State University, Department of Aerospace Engineering
 - If the material is incompressible, the stress is indeterminate to some arbitrary hydrostatic pressure
 `\[T_{ij} = -p \delta_{ij} + \varphi_1 B_{ij} + \varphi_2 B_{ij}^{-1}\]`
 
+----
+## money rivlin
+
 - This is known as the Mooney-Rivlin model, which can be written in different ways
 `\[T_{ij} = -p \delta_{ij} + \mu \left(\frac{1}{2} + \beta\right) B_{ij} - \mu \left(\frac{1}{2} - \beta\right) B_{ij}^{-1}\]`
 
@@ -186,6 +211,9 @@ Wichita State University, Department of Aerospace Engineering
 - For incompressible materials, the neo-Hookean equation is
 `\[T_{ij} = -p \delta_{ij} + 2C_1 B_{ij}\]`
 
+----
+## neo-hookean solid
+
 - Where, for consistency with Hooke's Law, `\(2 C_1 = \mu\)`
 - When large tensile strains are not important, the neo-Hookean model is popular because it only needs one material constant, which has more physical meaning than Mooney-Rivlin constants.
 
@@ -193,7 +221,7 @@ Wichita State University, Department of Aerospace Engineering
 # simple deformation modes
 
 ----
-## incompressible uniaxial stretch
+## incompressible stretch
 
 - In large deformation problems, the stretch ratio, `\(\lambda\)` is often used (instead of strain)
 - `\(\lambda_1\)` represents the ratio of deformed length in `\(x_1\)` to undeformed length in `\(x_1\)`
