@@ -49,6 +49,9 @@ Wichita State University, Department of Aerospace Engineering
 - Although it cannot be simplified as much as for isotropic materials, Hooke's Law still applies to linear anisotropic materials
 `\[T_{ij} = C_{ijkl}E_{kl}\]`
 
+----
+## hooke's law
+
 - Or, written in "engineering" form 
 `\[\begin{bmatrix}
 	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
@@ -87,7 +90,7 @@ Wichita State University, Department of Aerospace Engineering
 	\sigma_{1}^\prime = \sigma_{11}^\prime =  Q_{11}Q_{11} \sigma_{11} + Q_{11}Q_{12} \sigma_{12} + Q_{11}Q_{13}\sigma_{13}\\
 	+ Q_{12}Q_{11} \sigma_{21} + Q_{12}Q_{12} \sigma_{22} + Q_{12}Q_{13}\sigma_{23}\\
 	+ Q_{13}Q_{11} \sigma_{31} + Q_{13}Q_{12} \sigma_{32} + Q_{13}Q_{13}\sigma_{33}
-	{gathered}\]` 
+\end{gathered}\]` 
 
 `\[\begin{gathered}
 	\sigma_{1}^\prime = Q_{11}^2 \sigma_{1} + Q_{12}^2 \sigma_{2} + Q_{13}^2\sigma_{3}\\
@@ -101,7 +104,7 @@ Wichita State University, Department of Aerospace Engineering
 	\sigma_{4}^\prime = \sigma_{23}^\prime =  Q_{21}Q_{31} \sigma_{11} + Q_{21}Q_{32} \sigma_{12} + Q_{21}Q_{33}\sigma_{13}\\
 	+ Q_{22}Q_{31} \sigma_{21} + Q_{22}Q_{32} \sigma_{22} + Q_{22}Q_{33}\sigma_{23}\\
 	+ Q_{23}Q_{31} \sigma_{31} + Q_{23}Q_{32} \sigma_{32} + Q_{23}Q_{33}\sigma_{33}
-{gathered}\]` 
+\end{gathered}\]` 
 
 `\[\begin{gathered}
 	\sigma_{4}^\prime = Q_{21}Q_{31} \sigma_{1} + Q_{22}Q_{32} \sigma_{22} + Q_{23}Q_{33}\sigma_{3}\\
@@ -113,8 +116,7 @@ Wichita State University, Department of Aerospace Engineering
 ## stress transformation
 
 - We often write `\(\sigma^\prime = R_\sigma \sigma\)` for engineering notation 
-`\[\hspace*{-2cm}
-R_\sigma = \begin{bmatrix}
+`\[R_\sigma = \begin{bmatrix}
 	Q_{11}^2 & Q_{12}^2 & Q_{13}^2 & 2Q_{12}Q_{13} & 2 Q_{11} Q_{13} & 2Q_{11}Q_{12}\\
 	Q_{21}^2 & Q_{22}^2 & Q_{23}^2 & 2Q_{22}Q_{23} & 2 Q_{21} Q_{23} & 2Q_{21}Q_{22}\\
 	Q_{31}^2 & Q_{32}^2 & Q_{33}^2 & 2Q_{32}Q_{33} & 2 Q_{31} Q_{33} & 2Q_{31}Q_{32}\\
@@ -128,8 +130,7 @@ R_\sigma = \begin{bmatrix}
 
 - We can follow the exact same procedure to transform strain
 - The values are almost the same, notice the highlighted terms
-`\[\hspace*{-2cm}
-R_\epsilon = \begin{bmatrix}
+`\[R_\epsilon = \begin{bmatrix}
 	Q_{11}^2 & Q_{12}^2 & Q_{13}^2 & %
 	d!50}{$\displaystyle Q_{12}Q_{13}$} &  %
 	d!50}{$\displaystyle Q_{11} Q_{13}$} & %
@@ -235,9 +236,13 @@ R_\epsilon = \begin{bmatrix}
 ----
 ## poisson's ratio
 
-- For isotropic materials we defined Poisson&rsquo;s ratio as `\(\nu = -E_{22}/E_{11}\)`
+- For isotropic materials we defined Poisson's ratio as `\(\nu = -E_{22}/E_{11}\)`
 - For anisotropic materials, we can have a different Poisson's ratio acting in different directions
 - We define `\(\nu_{ij} = -E_{jj}/E_{ii}\)` (with no summation), the ratio of the transverse strain in the `\(j\)` direction when stress is applied in the `\(i\)` direction
+
+----
+## poisson's ratio
+
 - For this example we can find `\(\nu_{12}\)` and `\(\nu_{13}\)` as
 `\[\begin{aligned}
 	\nu_{12} &= -E_{22}/E_{11} = -S_{1122}/S_{1111}\\
@@ -263,13 +268,17 @@ R_\epsilon = \begin{bmatrix}
 - An unfamiliar effect is that shear strains are introduced from a normal stress
 - We define shear coupling coefficients as `\(\eta_{1112} = \eta_{16} = -2E_{12}/E_{11}\)` due to `\(T_{11}\)`
 - These coupling terms can also effect shear strain in a different plane from the applied shear stress
+
+----
+## shear coupling
+
 - Like the Poisson's ratio, these are not entirely independent
 `\[\eta_{61} E_{x} = \eta_{16} G_{6}\]`
 
 - Where `\(G_6\)` is the shear modulus in the `\(12\)` plane
 
 ----
-## shear coupling coefficients
+## shear coupling 
 
 - Shear coupling coefficients are sometimes placed in two groups
 - Coefficients of mutual influence relate shear stress to normal strain and normal stress to shear strain
@@ -311,6 +320,10 @@ and
 
 - A monoclinic material is symmetric about one plane
 - If we consider the 1-direction to be the plane of material symmetry, we can use the previous equation with the `\(Q\)` found earlier
+
+----
+## monoclinic symmetry
+
 - As an example, we find the `\(C_{1112} = Q_{m1}Q_{n1}Q_{o1}Q_{p2}C_{mnop}\)`, however when `\(i\ne j\)`, `\(Q_{ij}=0\)`
 - This means we have `\(C_{1112} = (-1)^3(1) C_{1112}\)`, which can only be satisfied when `\(C_{1112} = 0\)`
 - We similarly can show that `\(C_{1113} = C_{1222} = C_{1223} C_{1233} = C_{1322} = C_{1323} = C_{1333} =0\)`
@@ -427,7 +440,7 @@ and
 ----
 ## iosipescu shear
 
-![image](../images/iosipescu.png)
+![image](../images/iosipescu.png) <!-- .element width="40%" -->
 
 ----
 ## two-rail shear
