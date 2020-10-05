@@ -95,6 +95,8 @@
 \makeatother
 \let\Oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{#2}}
+\newcommand{\highlight}[1]{%
+  \colorbox{red!50}{$\displaystyle#1$}}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -153,11 +155,13 @@ Wichita State University, Department of Aerospace Engineering
 \item
   For a general anisotropic material under the assumption of plane
   strain (\(u_i = \langle u_1(x_1,x_2), u_2(x_1,x_2)\rangle\)) the
-  equilibrium equations (in terms of displacement) are \[\begin{aligned}
+  equilibrium equations (in terms of displacement) are \[
+  \]\hspace{-.5in} \resizebox{1.2\hsize}{!}{$\displaystyle
+  \begin{aligned}
     C_{11} u_{1,11} + C_{66} u_{1,22} + C_{16} (2u_{1,12} + u_{2,11}) + C_{26} u_{2,22} + (C_{12}+C_{66})u_{2,12} &=0\\
     C_{16} u_{1,11} + C_{26} u_{1,22} + (C_{66} + C_{12}) u_{1,12} + C_{66} u_{2,11} + C_{22}u_{2,22} + 2C_{26}u_{2,12} &=0\\
     C_{15} u_{1,11} + C_{46} u_{1,22} + (C_{56} + C_{14})u_{1,12} + C_{56}u_{2,11} + C_{24} u_{2,22} + (C_{25}+C_{46})u_{2,12} &=0
-  \end{aligned}\]
+  \end{aligned} $} \$\$
 \end{itemize}
 \end{frame}
 
@@ -233,7 +237,7 @@ Wichita State University, Department of Aerospace Engineering
     C_{16} & C_{12} & C_{14}\\
     C_{66} & C_{26} & C_{46}\\
     C_{56} & C_{25} & C_{45}
-  \end{bmatrix} \qquad T = \begin{bmatrix}
+  \end{bmatrix} \\ T = \begin{bmatrix}
     C_{66} & C_{26} & C_{46}\\
     C_{26} & C_{22} & C_{24}\\
     C_{46} & C_{24} & C_{44}
