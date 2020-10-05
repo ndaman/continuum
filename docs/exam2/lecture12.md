@@ -140,7 +140,7 @@ which is often written as
 `\[a_i = \frac{\partial ^2 u_i}{\partial t^2}\]`
 
 - Thus we find the equations of motion for small strains to be
-`\[\rho_0 \frac{\partial ^2 u_i}{\partial t^2} = \rho_0 B_i T_{ij,j}\]`
+`\[\rho_0 \frac{\partial ^2 u_i}{\partial t^2} = \rho_0 B_i + T_{ij,j}\]`
 
 ----
 ## navier's equations 
@@ -156,7 +156,7 @@ which is often written as
 
 - Now we note a couple of things when we take `\(T_{ij,j}\)`
 
-`\[T_{ij,j} = \lambda \frac{\partial e}{\partial x_j} \delta_{ij} + \mu \left( \frac{\partial^2 u_i}{\partial x_j \partial x_j} + \frac{\partial u_j}{\partial x_j \partial x_i}\right)\]`
+`\[T_{ij,j} = \lambda \frac{\partial e}{\partial x_j} \delta_{ij} + \mu \left( \frac{\partial^2 u_i}{\partial x_j \partial x_j} + \frac{\partial^2 u_j}{\partial x_j \partial x_i}\right)\]`
 
 `\[\frac{\partial e}{\partial x_j} \delta_{ij} = \frac{\partial e}{\partial x_j}\]`
 

@@ -17,4 +17,6 @@ header-includes: |
   \makeatother
   \let\Oldincludegraphics\includegraphics
   \renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{#2}}
+  \newcommand{\highlight}[1]{%
+  	\colorbox{red!50}{$\displaystyle#1$}}
 ---
