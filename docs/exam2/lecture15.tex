@@ -114,7 +114,7 @@ Dr.~Nicholas Smith
 
 Wichita State University, Department of Aerospace Engineering
 
-8 October, 2020
+13 October, 2020
 \end{frame}
 
 \begin{frame}{schedule}
@@ -122,13 +122,13 @@ Wichita State University, Department of Aerospace Engineering
 \begin{itemize}
 \tightlist
 \item
-  8 Oct - Large Deformation
+  13 Oct - Large Deformation, HW 6 Due
 \item
-  13 Oct - Anisotropy and Large Deformation
+  15 Oct - Anisotropy and Large Deformation
 \item
-  15 Oct - Exam Review
+  20 Oct - Exam Review, HW 7 Due, HW 6 Self-Grade Due
 \item
-  20 Oct - Exam 2
+  22 Oct - Exam 2
 \end{itemize}
 \end{frame}
 
@@ -155,13 +155,11 @@ Wichita State University, Department of Aerospace Engineering
 \item
   For a general anisotropic material under the assumption of plane
   strain (\(u_i = \langle u_1(x_1,x_2), u_2(x_1,x_2)\rangle\)) the
-  equilibrium equations (in terms of displacement) are \[
-  \]\hspace{-.5in} \resizebox{1.2\hsize}{!}{$\displaystyle
-  \begin{aligned}
+  equilibrium equations (in terms of displacement) are \[\begin{aligned}
     C_{11} u_{1,11} + C_{66} u_{1,22} + C_{16} (2u_{1,12} + u_{2,11}) + C_{26} u_{2,22} + (C_{12}+C_{66})u_{2,12} &=0\\
     C_{16} u_{1,11} + C_{26} u_{1,22} + (C_{66} + C_{12}) u_{1,12} + C_{66} u_{2,11} + C_{22}u_{2,22} + 2C_{26}u_{2,12} &=0\\
     C_{15} u_{1,11} + C_{46} u_{1,22} + (C_{56} + C_{14})u_{1,12} + C_{56}u_{2,11} + C_{24} u_{2,22} + (C_{25}+C_{46})u_{2,12} &=0
-  \end{aligned} $} \$\$
+  \end{aligned}\]
 \end{itemize}
 \end{frame}
 
@@ -229,7 +227,7 @@ Wichita State University, Department of Aerospace Engineering
 \tightlist
 \item
   If we define the following quantities in terms of the stiffness tensor
-  \[Q = \begin{bmatrix}
+	\[\begin{gathered} Q = \begin{bmatrix}
     C_{11} & C_{16} & C_{15}\\
     C_{16} & C_{66} & C_{56}\\
     C_{15} & C_{56} & C_{55}
@@ -237,11 +235,12 @@ Wichita State University, Department of Aerospace Engineering
     C_{16} & C_{12} & C_{14}\\
     C_{66} & C_{26} & C_{46}\\
     C_{56} & C_{25} & C_{45}
-  \end{bmatrix} \\ T = \begin{bmatrix}
+  \end{bmatrix} \\
+  T = \begin{bmatrix}
     C_{66} & C_{26} & C_{46}\\
     C_{26} & C_{22} & C_{24}\\
     C_{46} & C_{24} & C_{44}
-  \end{bmatrix}\]
+	\end{bmatrix}\end{gathered}\]
 \end{itemize}
 \end{frame}
 

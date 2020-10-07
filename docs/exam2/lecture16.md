@@ -50,6 +50,9 @@ Wichita State University, Department of Aerospace Engineering
 - If we consider the position vector of two material points, in the starred frame we have
 `\[x_1^* = c(t) + Q(t)(x_1-x_0) \qquad x_2^* = c(t) + Q(t)(x_2-x_0)\]`
 
+----
+## change of frame
+
 - The relative position vector, `\(b=x_1-x_2\)` can also be found in the starred frame as 
 `\[b^* = x_1^*-x_2^* = Q(t)(x_1-x_2)\]`
 
@@ -156,6 +159,9 @@ Wichita State University, Department of Aerospace Engineering
 - From thermodynamics, it can be shown that the second Piola-Kirchhoff stress is the partial derivative of the Helmholtz free energy with respect to the Green strain
 `\[\tilde{T}_{ij} = \rho_0 \frac{\partial \Psi}{\partial E_{ij}}\]`
 
+----
+## helmholtz free energy
+
 - The Helmholtz free energy has both thermal and mechanical strain energy components, but in general we neglect the thermal portion, and use `\(W\)` to represent the mechanical work done (with density included) 
 `\[\tilde{T}_{ij} = \frac{\partial W}{\partial E_{ij}}\]`
 
@@ -168,6 +174,9 @@ Wichita State University, Department of Aerospace Engineering
 	II_B &= \frac{1}{2}(I_B^2 - B_{ik}B_{ki})\\
 	III_B &= J^2
 \end{aligned}\]`
+
+----
+## hyperelastic materials
 
 - For nearly incompressible materials, it is often more convenient to write an alternate form of the invariants 
 `\[\begin{aligned}
@@ -191,6 +200,9 @@ Wichita State University, Department of Aerospace Engineering
 
 - Sometimes `\(W\)` is expressed in terms of `\(F_{ij}\)`, which gives
 `\[\sigma_{ij} = \frac{1}{J} F_{ik} \frac{W}{\partial F_{kj}}\]`
+
+----
+## hyperelastic materials
 
 - `\(W\)` can also be expressed in terms of the stretch ratios, `\(\lambda_1\)`, `\(\lambda_2\)` and `\(\lambda_3\)` and the unit eigenvectors of `\(B_{ij}\)` `(\(b_i^{(j)}\))` 
 `\[\sigma_{ij} = \frac{\lambda_1}{\lambda_1 \lambda_2 \lambda_3} \frac{\partial W}{\partial \lambda_1} b_i^{(1)} b_j^{(1)} + \frac{\lambda_2}{\lambda_1 \lambda_2 \lambda_3} \frac{\partial W}{\partial \lambda_2} b_i^{(2)} b_j^{(2)} + \frac{\lambda_3}{\lambda_1 \lambda_2 \lambda_3} \frac{\partial W}{\partial \lambda_3} b_i^{(3)} b_j^{(3)}\]`

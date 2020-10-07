@@ -54,7 +54,7 @@ Wichita State University, Department of Aerospace Engineering
 
 - Or, written in "engineering" form 
 `\[\begin{bmatrix}
-	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
+	T_{11} \\ T_{22} \\ T_{33} \\ T_{23} \\ T_{13} \\ T_{12}
 	\end{bmatrix}
 	= \begin{bmatrix}
 	C_{1111} & C_{1122} & C_{1133} & C_{1123} & C_{1113} & C_{1112} \\
@@ -186,7 +186,7 @@ Wichita State University, Department of Aerospace Engineering
 ## compliance 
 
 `\[\begin{bmatrix}
-	E_{11}\\ E_{22} \\ E_{33} \\2E_{23} \\ 2E_{13} \\ 2E_{12}
+	E_{11} \\ E_{22} \\ E_{33} \\ 2E_{23} \\ 2E_{13} \\ 2E_{12}
 \end{bmatrix}
 = \begin{bmatrix}
 	S_{1111} & S_{1122} & S_{1133} & S_{1123} & S_{1113} & S_{1112} \\
@@ -196,7 +196,7 @@ Wichita State University, Department of Aerospace Engineering
 	S_{1113} & S_{1322} & S_{1333} & S_{1323} & S_{1313} & S_{1213} \\
 	S_{1112} & S_{1222} & S_{1233} & S_{1223} & S_{1213} & S_{1212}
 \end{bmatrix}\begin{bmatrix}
-	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
+	T_{11} \\ T_{22} \\ T_{33} \\ T_{23} \\ T_{13} \\ T_{12}
 \end{bmatrix} + \begin{bmatrix}
 	\alpha_{11} \\ \alpha_{22} \\ \alpha_{33} \\ 2\alpha_{23} \\ 2\alpha_{13} \\ 2\alpha_{12}
 \end{bmatrix}\Delta T\]`
@@ -315,7 +315,7 @@ and
 ## monoclinic symmetry 
 
 `\[\begin{bmatrix}
-	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
+	T_{11} \\ T_{22} \\ T_{33} \\ T_{23} \\ T_{13} \\ T_{12}
 \end{bmatrix}
 = \begin{bmatrix}
 	C_{1111} & C_{1122} & C_{1133} & C_{1123} & 0 & 0 \\
@@ -325,7 +325,7 @@ and
 	0 & 0 & 0 & 0 & C_{1313} & C_{1213} \\
 	0 & 0 & 0 & 0 & C_{1213} & C_{1212}
 \end{bmatrix}\begin{bmatrix}
-	E_{11}\\ E_{22} \\ E_{33} \\2E_{23} \\ 2E_{13} \\ 2E_{12}
+	E_{11} \\ E_{22} \\ E_{33} \\ 2E_{23} \\ 2E_{13} \\ 2E_{12}
 \end{bmatrix}\]`
 
 ----
@@ -340,7 +340,7 @@ and
 ## orthotropic symmetry 
 
 `\[\begin{bmatrix}
-	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
+	T_{11} \\ T_{22} \\ T_{33} \\ T_{23} \\ T_{13} \\ T_{12}
 \end{bmatrix}
 = \begin{bmatrix}
 	C_{1111} & C_{1122} & C_{1133} & 0 & 0 & 0 \\
@@ -350,7 +350,7 @@ and
 	0 & 0 & 0 & 0 & C_{1313} & 0 \\
 	0 & 0 & 0 & 0 & 0 & C_{1212}
 \end{bmatrix}\begin{bmatrix}
-	E_{11}\\ E_{22} \\ E_{33} \\2E_{23} \\ 2E_{13} \\ 2E_{12}
+	E_{11} \\ E_{22} \\ E_{33} \\ 2E_{23} \\ 2E_{13} \\ 2E_{12}
 \end{bmatrix}\]`
 
 ----
@@ -363,7 +363,7 @@ and
 ## transversely isotropic symmetry 
 
 `\[\begin{bmatrix}
-	T_{11}\\ T_{22} \\ T_{33} \\T_{23} \\ T_{13} \\ T_{12}
+	T_{11} \\ T_{22} \\ T_{33} \\ T_{23} \\ T_{13} \\ T_{12}
 \end{bmatrix}
 = \begin{bmatrix}
 	C_{1111} & C_{1122} & C_{1133} & 0 & 0 & 0 \\
@@ -373,7 +373,7 @@ and
 	0 & 0 & 0 & 0 & C_{1313} & 0 \\
 	0 & 0 & 0 & 0 & 0 & 1/2(C_{1111}-C_{2222})
 \end{bmatrix}\begin{bmatrix}
-	E_{11}\\ E_{22} \\ E_{33} \\2E_{23} \\ 2E_{13} \\ 2E_{12}
+	E_{11} \\ E_{22} \\ E_{33} \\ 2E_{23} \\ 2E_{13} \\ 2E_{12}
 \end{bmatrix}\]`
 
 ---
