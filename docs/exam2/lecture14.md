@@ -4,16 +4,16 @@ Lecture 11 - Anisotropy<br/>
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
 
-6 October, 2020
+8 October, 2020
 
 ----
 ## schedule
 
-- 6 Oct - Anisotropy
-- 8 Oct - Large Deformation
-- 13 Oct - Anisotropy and Large Deformation
-- 15 Oct - Exam Review
-- 20 Oct - Exam 2
+- 8 Oct - Anisotropy
+- 13 Oct - Large Deformation, HW 6 Due
+- 15 Oct - Anisotropy and Large Deformation
+- 20 Oct - Exam Review, HW 7 Due, HW 6 Self-Grade Due
+- 22 Oct - Exam 2
 
 ----
 ## outline

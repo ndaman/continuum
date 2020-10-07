@@ -4,15 +4,15 @@ Lecture 13 - Anisotropic Hyperelasticity<br/>
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
 
-13 October, 2020
+15 October, 2020
 
 ----
 ## schedule
 
-- 13 Oct - Anisotropy and Large Deformation
-- 15 Oct - Exam Review, HW7 Due
-- 20 Oct - Exam 2
-- 22 Oct - Newtonian Fluids
+- 15 Oct - Anisotropy and Large Deformation
+- 20 Oct - Exam Review, HW7 Due, HW6 Self-Grade Due
+- 22 Oct - Exam 2
+- 27 Oct - Newtonian Fluids
 
 ----
 ## outline
