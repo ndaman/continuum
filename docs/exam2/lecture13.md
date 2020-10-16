@@ -268,7 +268,12 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## polar coordinates
 
-![image](../images/polar_table.PNG) <!-- .element width="70%" -->
+![first page of polar coordinate airy stress function table](../images/polar_table.PNG) <!-- .element width="70%" -->
+
+----
+## polar coordinates
+
+![second page of polar coordinate airy stress function table](../images/polar_table2.PNG) <!-- .element width="70%" -->
 
 ---
 # examples
