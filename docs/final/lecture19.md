@@ -1,297 +1,258 @@
-<span>upcoming schedule</span>
+# AE831
+## Continuum Mechanics
+Lecture 13 - Anisotropic Hyperelasticity<br/>
+Dr. Nicholas Smith<br/>
+Wichita State University, Department of Aerospace Engineering
 
-  - 7 Nov - Newtonian Fluids
+29 October, 2020
 
-  - 12 Nov - Newtonian Fluids
+----
+## schedule
 
-  - 14 Nov - Reynolds Transport Theorem
+- 29 Oct - Newtonian Fluids
+- 3 Nov - Newtonian Fluids
+- 5 Nov - Reynolds Transport Theorem
+- 10 Nov - Viscoelastic Materials
+- 12 Nov - Viscoelastic Materials
 
-  - 19 Nov - Viscoelastic Materials
+----
+## outline
 
-  - 21 Nov - No class (thanksgiving)
+<!-- vim-markdown-toc GFM -->
 
-### outline
+* newtonian fluids
+* flow conditions
 
-\[sections numbered\]
+<!-- vim-markdown-toc -->
 
+---
 # newtonian fluids
 
-<span>fluids in rigid motion</span>
+----
+## fluids in rigid motion
 
-  - We define a fluid as a material which is unable to resist shear
-    stress at rest
+- We define a fluid as a material which is unable to resist shear stress at rest
+- For a fluid in rigid body motion, the stress vector on any plane will be normal to that plane 
+`\[T_{ij}n_j = \lambda n_j\]`
 
-  - For a fluid in rigid body motion, the stress vector on any plane
-    will be normal to that plane \[T_{ij}n_j = \lambda n_j\]
+- The symmetry of the stress tensor leads us to find that
+`\[T_{ij} = -p \delta_{ij}\]`
 
-  - The symmetry of the stress tensor leads us to find that
-    \[T_{ij} = -p \delta_{ij}\]
+----
+## compressible and incompressible fluids
 
-<span>compressible and incompressible fluids</span>
+- Most liquids can be treated as incompressible in many fluid problems
+- Their change in density is negligible under a wide range of pressures
+- Most gases, however, must be treated as compressible
+- Recall the conservation of mass
+`\[\frac{D}{Dt} \rho + \rho \frac{\partial v_k}{\partial x_k} = 0\]`
 
-  - Most liquids can be treated as incompressible in many fluid problems
+- Which for an incompressible material becomes
+`\[\frac{\partial v_k}{\partial x_k} = 0\]`
 
-  - Their change in density is negligible under a wide range of
-    pressures
+- Density of an incompressible material can vary in space, as long as it does not vary in time
 
-  - Most gases, however, must be treated as compressible
+----
+## hydrostatics
 
-  - Recall the conservation of mass
-    \[\frac{D}{Dt} \rho + \rho \frac{\partial v_k}{\partial x_k} = 0\]
+- If we substitute `\(T_{ij} = -p \delta_{ij}\)` into the equilibrium equations, we find 
+`\[\frac{\partial p}{\partial x_i} = \rho B_i\]`
 
-  - Which for an incompressible material becomes
-    \[\frac{\partial v_k}{\partial x_k} = 0\]
+- If gravity is the only body force and acts in `\(x_3\)`, then pressure will only be a function of `\(x_3\)` (for static fluid)
+- If the fluid is in rigid body motion then we have
+`\[-\frac{\partial p}{\partial x_i} + \rho B_i = \rho a_i\]`
 
-  - Density of an incompressible material can vary in space, as long as
-    it does not vary in time
 
-<span>hydrostatics</span>
+----
+## example
 
-  - If we substitute \(T_{ij} = -p \delta_{ij}\) into the equilibrium
-    equations, we find \[\frac{\partial p}{\partial x_i} = \rho B_i\]
+- You are planning to load your fish tank into your friend's car for transportation
+- Your friend brags that he can accelerate from 0 to 60 in 5 seconds
+- Assuming this is true, and your tank is 2'x4' and 2' deep, how deep can you fill the tank without allowing any spilling due to acceleration?
 
-  - If gravity is the only body force and acts in \(x_3\), then pressure
-    will only be a function of \(x_3\) (for static fluid)
+----
+## general motion of fluids
 
-  - If the fluid is in rigid body motion then we have
-    \[-\frac{\partial p}{\partial x_i} + \rho B_i = \rho a_i\]
+- For a fluid in general motion, we de-compose the stress tensor into two portions 
+`\[T_{ij} = -p \delta_{ij} + T_{ij}^\prime\]`
 
-<span>example</span>
+- Where `\(T_{ij}^\prime\)` depends only on the rate of deformation and `\(p\)` is a scalar which does not depend on the rate of deformation
 
-  - You are planning to load your fish tank into your friend&rsquo;s car
-    for transportation
+----
+## newtonian fluids
 
-  - Your friend brags that he can accelerate from 0 to 60 in 5 seconds
+- For a fluid to be Newtonian, we make two assumptions
+- First, we assume that `\(T_{ij}^\prime\)` is linearly dependent on `\(D_{ij}\)` and nothing else
+- Second, we assume the fluid is isotropic
+- This gives
+`\[T_{ij}^\prime = \lambda D_{kk}\delta_{ij} + 2\mu D_{ij}\]`
 
-  - Assuming this is true, and your tank is 2&rsquo;x4&rsquo;, and
-    2&rsquo; deep, how deep can you fill the tank without allowing any
-    spilling due to acceleration?
+----
+## physical interpretation
 
-<span>general motion of fluids</span>
+- If we consider a shear flow given by the velocity field
+`\[v_1 = f(x_2) \qquad v_2 = v_3 = 0\]`
 
-  - For a fluid in general motion, we de-compose the stress tensor into
-    two portions \[T_{ij} = -p \delta_{ij} + T_{ij}^\prime\]
+- We have a rate of deformation tensor with
+`\[D_{12} = \frac{1}{2} \frac{d v_1}{d x_2}\]`
 
-  - Where \(T_{ij}^\prime\) depends only on the rate of deformation and
-    \(p\) is a scalar which does not depend on the rate of deformation
+- With all other `\(D_{ij} = 0\)`
+- Thus we find `\(T_{12} = \mu \frac{dv_1}{dx_2}\)`
+- `\(\mu\)` relates shear stress to the rate of change of the angle, is known as viscosity
 
-<span>newtonian fluids</span>
+----
+## physical interpretation
 
-  - For a fluid to be Newtonian, we make two assumptions
+- For a general velocity field, if we take `\(1/3\)` of the contraction of the viscous stress tensor, we find
+`\[\frac{1}{3} T_{ii}^\prime = \left(\lambda + \frac{2\mu}{3}\right) D_{ii}\]`
 
-  - First, we assume that \(T_{ij}^\prime\) is linearly dependent on
-    \(D_{ij}\) and nothing else
+- The quantity `\(\left(\lambda + \frac{2\mu}{3}\right)\)` relates the mean viscous normal stress to the change in volume
+- It is often referred to as the bulk viscosity
 
-  - Second, we assume the fluid is isotropic
+----
+## incompressible fluid
 
-  - This gives
-    \[T_{ij}^\prime = \lambda D_{kk}\delta_{ij} + 2\mu D_{ij}\]
+- If a fluid is considered to be incompressible, then `\(D_{ii} = 0\)`
+- This gives the constitutive equation
+`\[T_{ij} = -p \delta_{ij} + 2\mu D_{ij}\]`
 
-<span>physical interpretation</span>
+- It is convenient to write it in terms of the velocity vector
+`\[T_{ij} = -p \delta_{ij} + 2\mu (v_{i,j} + v_{j,i})\]`
 
-  - If we consider a shear flow given by the velocity field
-    \[v_1 = f(x_2) \qquad v_2 = v_3 = 0\]
+----
+## navier-stokes
 
-  - We have a rate of deformation tensor with
-    \[D_{12} = \frac{1}{2} \frac{d v_1}{d x_2}\]
+- If we recall Navier-Stokes equations of motion
+`\[\rho \left ( \frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = \frac{\partial T_{ij}}{\partial x_j} + \rho B_i\]`
 
-  - With all other \(D_{ij} = 0\)
+- We can substitute the constitutive equation for newtonian fluids to find
+`\[\rho \left ( \frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = \rho B_i - \frac{\partial p}{\partial x_i} + \mu \frac{\partial ^2 v_i}{\partial x_j \partial x_j}\]`
 
-  - Thus we find \(T_{12} = \mu \frac{dv_1}{dx_2}\)
+- This gives three equations with four unknowns, we use the continuity equation to find the fourth unknown
+`\[\frac{\partial v_i}{\partial x_i} = 0\]`
 
-  - \(\mu\) relates shear stress to the rate of change of the angle, is
-    known as viscosity
+----
+## cylindrical and spherical coordinates
 
-<span>physical interpretation</span>
+- Navier-Stokes equations in cylindrical and spherical coordinates are found on p. 364-365 of the text
+- There is a typo in 6.8.1, should read 
+`\[\begin{gathered}
+	\frac{\partial v_r}{\partial r} + v_r \frac{\partial v_r}{\partial r} + \frac{v_\theta}{r} \left(\frac{\partial v_r}{\partial \theta} - v_\theta\right) + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + B_r\\
+	+ \frac{\mu}{\rho} \left[\frac{\partial ^2 v_r}{\partial r^2} + \frac{1}{r^2}\frac{\partial^2v_r}{\partial \theta^2} + \frac{\partial^2v_r}{\partial z^2} + \frac{1}{r}\frac{\partial v_r}{\partial r} - \frac{2}{r^2}\frac{\partial v_\theta}{\partial \theta} - \frac{v_r}{r^2}\right]
+\end{gathered}\]`
 
-  - For a general velocity field, if we take \(1/3\) of the contraction
-    of the viscous stress tensor, we find
-    \[\frac{1}{3} T_{ii}^\prime = \left(\lambda + \frac{2\mu}{3}\right) D_{ii}\]
-
-  - The quantity \(\left(\lambda + \frac{2\mu}{3}\right)\) relates the
-    mean viscous normal stress to the change in volume
-
-  - It is often referred to as the bulk viscosity
-
-<span>incompressible fluid</span>
-
-  - If a fluid is considered to be incompressible, then \(D_{ii} = 0\)
-
-  - This gives the constitutive equation
-    \[T_{ij} = -p \delta_{ij} + 2\mu D_{ij}\]
-
-  - It is convenient to write it in terms of the velocity vector
-    \[T_{ij} = -p \delta_{ij} + 2\mu (v_{i,j} + v_{j,i})\]
-
-<span>navier-stokes</span>
-
-  - If we recall Navier-Stokes equations of motion
-    \[\rho \left ( \frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = \frac{\partial T_{ij}}{\partial x_j} + \rho B_i\]
-
-  - We can substitute the constitutive equation for newtonian fluids to
-    find
-    \[\rho \left ( \frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = \rho B_i - \frac{\partial p}{\partial x_i} + \mu \frac{\partial ^2 v_i}{\partial x_j \partial x_j}\]
-
-  - This gives three equations with four unknowns, we use the continuity
-    equation to find the fourth unknown
-    \[\frac{\partial v_i}{\partial x_i} = 0\]
-
-<span>cylindrical and spherical coordinates</span>
-
-  - Navier-Stokes equations in cylindrical and spherical coordinates are
-    found on p. 364-365 of the text
-
-  - There is a typo in 6.8.1, should read \[\begin{gathered}
-            \frac{\partial v_r}{\partial r} + v_r \frac{\partial v_r}{\partial r} + \frac{v_\theta}{r} \left(\frac{\partial v_r}{\partial \theta} - v_\theta\right) + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + B_r\\
-            + \frac{\mu}{\rho} \left[\frac{\partial ^2 v_r}{\partial r^2} + \frac{1}{r^2}\frac{\partial^2v_r}{\partial \theta^2} + \frac{\partial^2v_r}{\partial z^2} + \frac{1}{r}\frac{\partial v_r}{\partial r} - \frac{2}{r^2}\frac{\partial v_\theta}{\partial \theta} - \frac{v_r}{r^2}\right]
-            \end{gathered}\]
-
+---
 # flow conditions
 
-<span>nonslip</span>
+----
+## nonslip
 
-  - A common assumption is that of *nonslip* boundaries
+- A common assumption is that of *nonslip* boundaries
+- Agrees well with experiments
+- Both Newtonian and non-Newtonian fluids
+- Fluid moves with boundary, for rigid boundaries the velocity at the boundary is 0
 
-  - Agrees well with experiments
+----
+## streamline
 
-  - Both Newtonian and non-Newtonian fluids
+- In general, fluid flow is characterized by a velocity field
+- As a vector field, there are different ways in which to visualize the field
+- Streamlines, pathlines, streaklines and timelines are common ways we talk about fluids
 
-  - Fluid moves with boundary, for rigid boundaries the velocity at the
-    boundary is 0
+----
+## steady and unsteady flow
 
-<span>streamline</span>
+- A flow is called *steady* if it is fixed in time (at a fixed location)
+- Otherwise it is called unsteady
+- Steady flow does not mean the material derivative is zero (`\(D\Psi/Dt \ne 0\)`)
+- But it does mean that the partial derivative with respect to time is zero (`\(\partial \Psi / \partial t = 0\)`)
+- For steady flow, streamlines, streaklines, and pathlines are the same
 
-  - In general, fluid flow is characterized by a velocity field
+----
+## streamline
 
-  - As a vector field, there are different ways in which to visualize
-    the field
+- A streamline is a curve which is instantaneously tangent to the velocity vector
+- Experimentally, streamlines can be found on the surface of a fluid by sprinkling reflective particles and making a short-time exposure photograph
+- Mathematically, streamlines can be found by considering a parametric equation for a curve `\(x_i = x_i(s)\)`
+- We choose `\(s\)` so that `\(dx_i/ds = v_i\)` and `\(s=0\)` corresponds to the point `\(x_0\)`, which is the originating point of our streamline
 
-  - Streamlines, pathlines, streaklines and timelines are common ways we
-    talk about fluids
+----
+## streamline example
 
-<span>steady and unsteady flow</span>
+- Given the velocity field
+`\[v_i = \langle \frac{kx_1}{1+\alpha t}, kx_2, 0 \rangle\]` 
 
-  - A flow is called *steady* if it is fixed in time (at a fixed
-    location)
+find the streamline passing through `\((a_1,a_2,a_3)\)` at time `\(t\)`
 
-  - Otherwise it is called unsteady
+----
+## pathline
 
-  - Steady flow does not mean the material derivative is zero
-    (\(D\Psi/Dt \ne 0\))
+- A pathline is the path traversed by a fluid particle
+- Experimentally, pathlines can be found by using one reflective particle and a long-time exposure photograph
+- Mathematically, the pathline can be obtained from the velocity field
+as follows 
+`\[\begin{aligned}
+	\frac{dx_i}{dt} &= v_i(x_i,t)\\
+	x_i(t_0) = X_i
+\end{aligned}\]`
 
-  - But it does mean that the partial derivative with respect to time is
-    zero (\(\partial \Psi / \partial t = 0\))
+----
+## pathline example
 
-  - For steady flow, streamlines, streaklines, and pathlines are the
-    same
+- Given the velocity field
+`\[v_i = \langle \frac{kx_1}{1+\alpha t}, kx_2, 0 \rangle\]` 
 
-<span>streamline</span>
+find the pathline passing through `\((a_1,a_2,a_3)\)` at time \(t\)
 
-  - A streamline is a curve which is instantaneously tangent to the
-    velocity vector
+----
+## streakline
 
-  - Experimentally, streamlines can be found on the surface of a fluid
-    by sprinkling reflective particles and making a short-time exposure
-    photograph
+- Streaklines are commonly found experimentally, but are difficult to express mathematically
+- A streakline is formed when dye is steadily injected into a fluid from a fixed point
+- The path that the very first point of dye follows is a pathline
+- But the dye following behind is altered by the changing flow field, which makes the streakline left by the continuously injected dye different from a pathline
 
-  - Mathematically, streamlines can be found by considering a parametric
-    equation for a curve \(x_i = x_i(s)\)
+----
+## timeline
 
-  - We choose \(s\) so that \(dx_i/ds = v_i\) and \(s=0\) corresponds to
-    the point \(x_0\), which is the originating point of our streamline
+- The final common method for visualizing fluid flows is known as a timeline
+- Fluid particles are marked at a given instance of time (often forming a line at `\(t_0\)`)
+- After set intervals of time, lines are drawn between these particles
+- These lines are called timelines
 
-<span>streamline example</span>
+----
+## animation
+![an animation comparing streaklines, streamlines and pathlines](../images/Streaklines_and_pathlines_animation.gif) <!-- .element width="70%" -->
 
-  - Given the velocity field
-    \[v_i = \langle \frac{kx_1}{1+\alpha t}, kx_2, 0 \rangle\] find the
-    streamline passing through \((a_1,a_2,a_3)\) at time \(t\)
+----
+## laminar flow
 
-<span>pathline</span>
+- Laminar flow is very orderly
+- Fluid particles move in smooth layers (*laminae*)
+- Occurs when fluid flow is relatively slow
 
-  - A pathline is the path traversed by a fluid particle
+----
+## reynolds number
 
-  - Experimentally, pathlines can be found by using one reflective
-    particle and a long-time exposure photograph
+- Dimensionless parameter to compare how "fast" or "slow" a fluid is moving
+- For experiments under otherwise identical conditions, reynolds number is used to determine whether flow will be laminar
+- Ratio of inertial forces to viscous forces
+- In a tube, Reynolds number is 
+`\[N_R = \frac{v_m \rho d}{\mu}\]`
 
-  - Mathematically, the pathline can be obtained from the velocity field
-    as follows \[\begin{aligned}
-            \frac{dx_i}{dt} &= v_i(x_i,t)\\
-            x_i(t_0) = X_i
-            \end{aligned}\]
+- For water in a tube, `\(N_R < 2100\)` gives laminar flow
 
-<span>pathline example</span>
+----
+## turbulent flow
 
-  - Given the velocity field
-    \[v_i = \langle \frac{kx_1}{1+\alpha t}, kx_2, 0 \rangle\] find the
-    pathline passing through \((a_1,a_2,a_3)\) at time \(t\)
+- In laminar flow, small perturbations are quickly overcome
+- For turbulent flow, unsteady vortices appear and interact with each other
+- Turbulent flows are highly irregular and chaotic
+- Turbulence increases diffusivity, causing fluids to mix more quickly
+- High Reynolds numbers correspond to turbulence, but how high depends on the specific experiment
+- There is often a large transition range between laminar and turbulent flow
 
-<span>streakline</span>
+----
+## reading
 
-  - Streaklines are commonly found experimentally, but are difficult to
-    express mathematically
-
-  - A streakline is formed when dye is steadily injected into a fluid
-    from a fixed point
-
-  - The path that the very first point of dye follows is a pathline
-
-  - But the dye following behind is altered by the changing flow field,
-    which makes the streakline left by the continuously injected dye
-    different from a pathline
-
-<span>timeline</span>
-
-  - The final common method for visualizing fluid flows is known as a
-    timeline
-
-  - Fluid particles are marked at a given instance of time (often
-    forming a line at \(t_0\))
-
-  - After set intervals of time, lines are drawn between these particles
-
-  - These lines are called timelines
-
-<span>animation</span>
-
-<span>laminar flow</span>
-
-  - Laminar flow is very orderly
-
-  - Fluid particles move in smooth layers (*laminae*)
-
-  - Occurs when fluid flow is relatively slow
-
-<span>reynolds number</span>
-
-  - Dimensionless parameter to compare how "fast" or "slow" a fluid is
-    moving
-
-  - For experiments under otherwise identical conditions, reynolds
-    number is used to determine whether flow will be laminar
-
-  - Ratio of inertial forces to viscous forces
-
-  - In a tube, Reynolds number is \[N_R = \frac{v_m \rho d}{\mu}\]
-
-  - For water in a tube, \(N_R < 2100\) gives laminar flow
-
-<span>turbulent flow</span>
-
-  - In laminar flow, small perturbations are quickly overcome
-
-  - For turbulent flow, unsteady vortices appear and interact with each
-    other
-
-  - Turbulent flows are highly irregular and chaotic
-
-  - Turbulence increases diffusivity, causing fluids to mix more quickly
-
-  - High Reynolds numbers correspond to turbulence, but how high depends
-    on the specific experiment
-
-  - There is often a large transition range between laminar and
-    turbulent flow
-
-<span>reading</span>
-
-  - pp 365-375
+- pp 365-375
