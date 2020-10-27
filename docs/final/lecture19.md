@@ -10,10 +10,11 @@ Wichita State University, Department of Aerospace Engineering
 ## schedule
 
 - 29 Oct - Newtonian Fluids
-- 3 Nov - Newtonian Fluids
-- 5 Nov - Reynolds Transport Theorem
-- 10 Nov - Viscoelastic Materials
-- 12 Nov - Viscoelastic Materials
+- 3 Nov - Experimental Rheology
+- 5 Nov - Energy, Rotation, Vorticity
+- 10 Nov - Compressible Flow, HW8 Due
+- 12 Nov - Non-Newtonian Fluids
+
 
 ----
 ## outline
