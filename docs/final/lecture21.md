@@ -27,6 +27,10 @@ Wichita State University, Department of Aerospace Engineering
 
 - Steady unidirectional flow of an incompressible fluid between two horizontal plates with no pressure gradient in the flow direction is known as plane Couette flow
 - one plate is fixed and the other moves with a constant velocity ``\(v_0\)``
+
+----
+## plane couette flow
+
 - From the continuity equation 
 ``\[v_i = \langle v(x_2), 0, 0 \rangle\]``
 
@@ -56,6 +60,9 @@ Wichita State University, Department of Aerospace Engineering
 - Steady, unidirectional axisymmetric flow in a circular cylinder
 ``\[v_r = v_\theta = 0, \qquad v_z = v(r)\]``
 
+----
+## hagen-poisseuille
+
 - From the Navier-Stokes equations, we find 
 ``\[\begin{aligned}
 	\frac{\partial p}{\partial r} &= 0\\
@@ -66,8 +73,16 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## example
 
+<div class="left">
+
 - Find the velocity field if there are two fluids (in layers) in plane couette flow
+
+</div>
+<div class="right">
+
 ![Two fluids in plane couette flow](../images/f06-14-01-H8560.jpg)
+
+</div class="right">
 
 ----
 ## couette flow
@@ -76,13 +91,20 @@ Wichita State University, Department of Aerospace Engineering
 - The velocity field has the form
 ``\[v_r = 0, \qquad v_\theta = v(r), \qquad v_z = 0\]``
 
-- Continuity is automatically satisfied, Navier-Stokes gives
-``\[\frac{d^2v}{dr^2} + \frac{1}{r}\frac{dv}{dr}-\frac{v}{r^2} = 0\]``
-
 ----
 ## couette flow
 
+<div class="left">
+
+- Continuity is automatically satisfied, Navier-Stokes gives
+``\[\frac{d^2v}{dr^2} + \frac{1}{r}\frac{dv}{dr}-\frac{v}{r^2} = 0\]``
+
+</div>
+<div class="right">
+
 ![couette flow](../images/f06-15-01-H8560.jpg)
+
+</div class="right">
 
 ----
 ## oscillating plane
@@ -92,6 +114,9 @@ Wichita State University, Department of Aerospace Engineering
 
 - The only non-trivial Navier-Stokes equation gives
 ``\[\rho \frac{\partial v}{\partial t} = \mu \frac{\partial ^2 v}{\partial x_2^2}\]``
+
+----
+## oscillating plane
 
 - Which has the solution
 ``\[v = ae^{-\beta x_2} \cos (\omega t - \beta x_2 + \epsilon)\]``
@@ -148,7 +173,7 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## extensional rheometry
 
-![extensional rheometry](../images/extensional.jpg)
+![extensional rheometry](../images/extensional.jpg) <!-- .element width="40%" -->
 
 ----
 ## extensional rheometry
@@ -179,10 +204,18 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## group 3
 
+<div class="left">
+
 - A slender U-tube moves to the right with some acceleration, `\(a\)`.
 - Find the relation between `\(a\)`, the width of the tube, `\(l\)` and the difference in height levels of water at different ends of the tube, `\(h\)`
 - Note: do not neglect gravity
+
+</div>
+<div class="right">
+
 ![image](../images/p06-07-H8560.jpg)
+
+</div class="right">
 
 ----
 ## reading

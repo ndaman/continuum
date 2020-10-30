@@ -145,9 +145,10 @@ Wichita State University, Department of Aerospace Engineering
 ## cylindrical and spherical coordinates
 
 - Navier-Stokes equations in cylindrical and spherical coordinates are found on p. 364-365 of the text
-- There is a typo in 6.8.1, should read `\[ \begin{gathered}
+- There is a typo in 6.8.1, should read 
+`\[ \begin{gathered}
 	\frac{\partial v_r}{\partial r} + v_r \frac{\partial v_r}{\partial r} + \frac{v_\theta}{r} \left(\frac{\partial v_r}{\partial \theta} - v_\theta\right) + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + B_r\\
-	+ \frac{\mu}{\rho} \left[\frac{\partial ^2 v_r}{\partial r^2} + \frac{1}{r^2}\frac{\partial^2v_r}{\partial \theta^2} + \frac{\partial^2v_r}{\partial z^2} + \frac{1}{r}\frac{\partial v_r}{\partial r} - \frac{2}{r^2}\frac{\partial v_\theta}{\partial \theta} - \frac{v_r}{r^2}\right]
+	+\frac{\mu}{\rho} \left[\frac{\partial ^2 v_r}{\partial r^2} + \frac{1}{r^2}\frac{\partial^2v_r}{\partial \theta^2} + \frac{\partial^2v_r}{\partial z^2} + \frac{1}{r}\frac{\partial v_r}{\partial r} - \frac{2}{r^2}\frac{\partial v_\theta}{\partial \theta} - \frac{v_r}{r^2}\right]
 \end{gathered} \]`
 
 
