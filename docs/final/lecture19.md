@@ -40,7 +40,7 @@ Wichita State University, Department of Aerospace Engineering
 `\[T_{ij} = -p \delta_{ij}\]`
 
 ----
-## compressible and incompressible fluids
+## fluid compressibility
 
 - Most liquids can be treated as incompressible in many fluid problems
 - Their change in density is negligible under a wide range of pressures
@@ -49,7 +49,7 @@ Wichita State University, Department of Aerospace Engineering
 `\[\frac{D}{Dt} \rho + \rho \frac{\partial v_k}{\partial x_k} = 0\]`
 
 ----
-## compressible and incompressible fluids
+## fluid compressibility
 
 - Which for an incompressible material becomes
 `\[\frac{\partial v_k}{\partial x_k} = 0\]`
@@ -100,6 +100,9 @@ Wichita State University, Department of Aerospace Engineering
 - We have a rate of deformation tensor with
 `\[D_{12} = \frac{1}{2} \frac{d v_1}{d x_2}\]`
 
+----
+## physical interpretation
+
 - With all other `\(D_{ij} = 0\)`
 - Thus we find `\(T_{12} = \mu \frac{dv_1}{dx_2}\)`
 - `\(\mu\)` relates shear stress to the rate of change of the angle, is known as viscosity
@@ -132,6 +135,9 @@ Wichita State University, Department of Aerospace Engineering
 - We can substitute the constitutive equation for newtonian fluids to find
 `\[\rho \left ( \frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = \rho B_i - \frac{\partial p}{\partial x_i} + \mu \frac{\partial ^2 v_i}{\partial x_j \partial x_j}\]`
 
+----
+## navier-stokes
+
 - This gives three equations with four unknowns, we use the continuity equation to find the fourth unknown
 `\[\frac{\partial v_i}{\partial x_i} = 0\]`
 
@@ -144,6 +150,7 @@ Wichita State University, Department of Aerospace Engineering
 	\frac{\partial v_r}{\partial r} + v_r \frac{\partial v_r}{\partial r} + \frac{v_\theta}{r} \left(\frac{\partial v_r}{\partial \theta} - v_\theta\right) + v_z \frac{\partial v_r}{\partial z} = -\frac{1}{\rho} \frac{\partial p}{\partial r} + B_r\\
 	+ \frac{\mu}{\rho} \left[\frac{\partial ^2 v_r}{\partial r^2} + \frac{1}{r^2}\frac{\partial^2v_r}{\partial \theta^2} + \frac{\partial^2v_r}{\partial z^2} + \frac{1}{r}\frac{\partial v_r}{\partial r} - \frac{2}{r^2}\frac{\partial v_\theta}{\partial \theta} - \frac{v_r}{r^2}\right]
 \end{gathered}\]`
+
 
 ---
 # flow conditions
@@ -226,7 +233,7 @@ find the pathline passing through `\((a_1,a_2,a_3)\)` at time \(t\)
 
 ----
 ## animation
-![an animation comparing streaklines, streamlines and pathlines](../images/Streaklines_and_pathlines_animation.gif) <!-- .element width="70%" -->
+![an animation comparing streaklines, streamlines and pathlines](../images/Streaklines_and_pathlines_animation.gif) <!-- .element width="60%" -->
 
 ----
 ## laminar flow
@@ -241,6 +248,10 @@ find the pathline passing through `\((a_1,a_2,a_3)\)` at time \(t\)
 - Dimensionless parameter to compare how "fast" or "slow" a fluid is moving
 - For experiments under otherwise identical conditions, reynolds number is used to determine whether flow will be laminar
 - Ratio of inertial forces to viscous forces
+
+----
+## reynolds number
+
 - In a tube, Reynolds number is 
 `\[N_R = \frac{v_m \rho d}{\mu}\]`
 
