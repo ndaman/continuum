@@ -233,7 +233,7 @@ find the pathline passing through `\((a_1,a_2,a_3)\)` at time \(t\)
 
 ----
 ## animation
-![an animation comparing streaklines, streamlines and pathlines](../images/Streaklines_and_pathlines_animation.gif) <!-- .element width="60%" -->
+![an animation comparing streaklines, streamlines and pathlines](../images/Streaklines_and_pathlines_animation.gif) <!-- .element width="40%" -->
 
 ----
 ## laminar flow
