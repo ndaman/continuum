@@ -1,19 +1,19 @@
 # AE831
 ## Continuum Mechanics
-Lecture 13 - Anisotropic Hyperelasticity<br/>
+Lecture 14 - Newtonian Fluids<br/>
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
 
-29 October, 2020
+3 November, 2020
 
 ----
 ## schedule
 
-- 29 Oct - Newtonian Fluids
-- 3 Nov - Experimental Rheology
-- 5 Nov - Energy, Rotation, Vorticity
-- 10 Nov - Compressible Flow, HW8 Due
-- 12 Nov - Non-Newtonian Fluids
+- 3 Nov - Newtonian Fluids
+- 5 Nov - Experimental Rheology
+- 10 Nov - Energy, Rotation, Vorticity
+- 12 Nov - Compressible Flow, HW8 Due
+- 17 Nov - Non-Newtonian Fluids
 
 
 ----
@@ -47,6 +47,9 @@ Wichita State University, Department of Aerospace Engineering
 - Most gases, however, must be treated as compressible
 - Recall the conservation of mass
 `\[\frac{D}{Dt} \rho + \rho \frac{\partial v_k}{\partial x_k} = 0\]`
+
+----
+## compressible and incompressible fluids
 
 - Which for an incompressible material becomes
 `\[\frac{\partial v_k}{\partial x_k} = 0\]`
