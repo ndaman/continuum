@@ -204,14 +204,14 @@ Wichita State University, Department of Aerospace Engineering
 ----
 ## group 3
 
-<div class="left"> <!-- .element width="70%" -->
+<div class="left" style="width: 70%"> 
 
 - A slender U-tube moves to the right with some acceleration, `\(a\)`.
 - Find the relation between `\(a\)`, the width of the tube, `\(l\)` and the difference in height levels of water at different ends of the tube, `\(h\)`
 - Note: do not neglect gravity
 
 </div>
-<div class="right"> <!-- .element width="30%" -->
+<div class="right" style="width: 30%"> 
 
 ![image](../images/p06-07-H8560.jpg)
 
