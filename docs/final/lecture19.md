@@ -124,7 +124,7 @@ Wichita State University, Department of Aerospace Engineering
 `\[T_{ij} = -p \delta_{ij} + 2\mu D_{ij}\]`
 
 - It is convenient to write it in terms of the velocity vector
-`\[T_{ij} = -p \delta_{ij} + 2\mu (v_{i,j} + v_{j,i})\]`
+`\[T_{ij} = -p \delta_{ij} + \mu (v_{i,j} + v_{j,i})\]`
 
 ----
 ## navier-stokes
