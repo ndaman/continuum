@@ -33,15 +33,19 @@ Wichita State University, Department of Aerospace Engineering
 - If we multiply both sides by the velocity gradient, `\(v_{i,j}\)`, we find 
 `\[T_{ij}v_{i,j} = -p v_{i,i} + T^\prime_{ij} v_{i,j}\]`
 
+----
+## incompressible newtonian fluid
+
 - But for an incompressible fluid, we know that `\(v_{i,i} = 0\)`, therefore 
 `\[T_{ij}v_{i,j} = T^\prime_{ij} v_{i,j}\]`
+
+- Note that `\(T_{ij}v_{i,j} = T_{ij}(D_{ij}+W_{ij})\)`
 
 ----
 ## incompressible newtonian fluid
 
-- Note that `\(T_{ij}v_{i,j} = T_{ij}(D_{ij}+W_{ij})\)`
 - Since `\(T_{ij}\)` is symmetric and `\(W_{ij}\)` is antisymmetric, we find that `\(T_{ij}v_{i,j} = T_{ij}D_{ij}\)`, which is an expression for stress power
-- The right sight can be written as
+- The right side can be written as
 `\[T^\prime_{ij} v_{i,j} = 2\mu D_{ij} v_{i,j} = 2\mu D_{ij}(D_{ij}+W_{ij})\]`
 
 - But `\(D_{ij}W_{ij}=0\)`, since `\(D_{ij}\)` is symmetric and `\(W_{ij}\)` is antisymmetric
@@ -63,13 +67,18 @@ Wichita State University, Department of Aerospace Engineering
 `\[T_{ij}^\prime = \lambda D_{kk} \delta_{ij} + 2\mu D_{ij}\]`
 
 - Where `\(D_{kk} = v_{i,i}\)`
-- Multiplying both sides of the constitutive equation as before, we find the stress power to be
-`\[P_s = -p v_{i,i} + \lambda v_{i,i}^2 + 2\mu D_{ij}D_{ij}\]`
 
 ----
 ## compressible newtonian fluid
 
+- Multiplying both sides of the constitutive equation as before, we find the stress power to be
+`\[P_s = -p v_{i,i} + \lambda v_{i,i}^2 + 2\mu D_{ij}D_{ij}\]`
+
 - From the equation for `\(P_s\)`, `\(-p v_{i,i}\)` represents the work done to change the volume of the fluid
+
+----
+## compressible newtonian fluid
+
 - `\(\lambda v_{i,i}^2 + 2\mu D_{ij}D_{ij}\)` represents the rate at which work is converted to heat
 - This is known as the dissipation function for compressible Newtonian fluids
 
@@ -113,6 +122,9 @@ Wichita State University, Department of Aerospace Engineering
 - The vorticity vector is defined to eliminate the `\(1/2\)` from the angular velocity vector
 `\[\zeta = 2\omega = \langle v_{3,2} - v_{2,3}, v_{1,3}-v_{3,1}, v_{2,1}-v_{1,2} \rangle\]`
 
+----
+## vorticity vector
+
 - In index notation, we can write 
 `\[\zeta = \epsilon_{ijk} v_{k,j}\]`
 
@@ -141,7 +153,11 @@ Wichita State University, Department of Aerospace Engineering
 `\[\rho \left(\frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j}\right) = -\frac{\partial p}{\partial x_i} + \rho B_i\]`
 
 - These are known as Euler's equations of motion
-- If `\(rho\)` is constant and body forces are express as
+
+----
+## inviscid incompressible flow
+
+- If `\(\rho\)` is constant and body forces are expressed as
 `\[B_i = - \frac{\partial \Omega}{\partial x_i}\]` 
 
 then we can write
@@ -174,6 +190,10 @@ then we can write
 - For a compressible fluid, we still need the pressure `\(p\)` to not be a function of deformation rate
 - The pressure will be some function of density and temperature
 - For example, ideal gases will follow the ideal gas law `\(p = R\rho \Theta\)`
+
+----
+## compressible flow
+
 - The constitutive equation for a compressible Newtonian fluid are
 `\[T_{ij} = -p(\rho, \Theta) \delta_{ij} + \lambda \frac{\partial v_k}{\partial x_k} \delta_{ij} + 2\mu D_{ij}\]`
 
@@ -199,6 +219,9 @@ where `\(k=\lambda + \frac{2}{3}\mu\)` (the bulk viscosity)
 - And the energy equation is
 `\[\rho \frac{D u}{Dt} = T_{ij} \frac{\partial v_i}{\partial x_j} + \kappa \frac{\partial ^2 \Theta}{\partial x_j \partial x_j}\]`
 
+----
+## compressible flow
+
 - We also recall the continuity equation
 `\[\frac{D \rho}{Dt} + \rho \frac{\partial v_j}{\partial x_j} = 0\]`
 
@@ -211,6 +234,9 @@ where `\(k=\lambda + \frac{2}{3}\mu\)` (the bulk viscosity)
 - Let us consider the propagation of sound in an inviscid fluid with negligible body forces
 - The equations of motion reduce to
 `\[\frac{\partial v_i}{\partial t} + v_j \frac{\partial v_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i}\]`
+
+----
+## acoustic waves
 
 - If the fluid is initially at rest (`\(v_i=0, \rho = \rho_0, p=p_0\)`) with some perturbation such that
 `\[v_i = v_i^\prime(x_i,t) \qquad \rho = \rho_0 + \rho^\prime(x_i,t) \qquad p = p_0 + p^\prime(x_i,t)\]`
@@ -227,6 +253,9 @@ where `\(k=\lambda + \frac{2}{3}\mu\)` (the bulk viscosity)
 - Similarly the continuity equation
 `\[\frac{\partial \rho^\prime}{\partial t} + v_j^\prime \frac{\partial \rho^\prime}{\partial x_j} + \rho_0(1 + \rho^\prime/\rho_0) \frac{\partial v_i^\prime}{\partial x_i} = 0\]`
 
+----
+## acoustic waves
+
 - Which reduces to 
 `\[ \frac{\partial v_i^\prime}{\partial x_i} = -\frac{1}{\rho_0}\frac{\partial \rho^\prime}{\partial t}\]`
 
@@ -235,6 +264,9 @@ where `\(k=\lambda + \frac{2}{3}\mu\)` (the bulk viscosity)
 
 - We can differentiate with respect to `\(x_i\)` and with  respect to `\(t\)` to eliminate velocity from both equations
 `\[\frac{\partial ^2 p^\prime}{\partial x_i \partial x_i} = \frac{\partial ^2 p^\prime}{\partial t^2}\]`
+
+----
+## acoustic waves
 
 - If pressure depends only on density (barotropic flow) then we can expand the pressure function as a Taylor series
 `\[p = p_0 + \left(\frac{d p}{d\rho}\right)_{\rho_0} (\rho-\rho_0) + ...\]`
@@ -322,6 +354,9 @@ or
 - Which we can define as
 `\[\left(\frac{dr_i}{dt}\right)_{F_1} = \left(v_0\right)_{F_1} + \left(\frac{dx_i}{dt}\right)_{F_1}\]`
 
+----
+## moving frames
+
 - We also know that for any vector `\(b_i\)`
 `\[\left(\frac{db_i}{dt}\right)_{F_1} = \left(\frac{db_i}{dt}\right)_{F_2} + \omega_i \times b_i\]`
 
@@ -341,6 +376,9 @@ where `\(\omega_i\)` is the angular velocity of `\(F_2\)` relative to `\(F_1\)`
 
 - If `\(F_1\)` is the inertial frame, then we have
 `\[\left(\frac{D}{Dt}\right)_{F_1} \int v_{F_1} dm = \int t_i dS + \int \rho B_i dV\]`
+
+----
+## moving frames
 
 - And in the moving frame 
 `\[\begin{gathered}
