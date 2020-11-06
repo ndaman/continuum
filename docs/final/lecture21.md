@@ -4,15 +4,15 @@ Lecture 15 - Experimental Rheology<br/>
 Dr. Nicholas Smith<br/>
 Wichita State University, Department of Aerospace Engineering
 
-5 November, 2020
+10 November, 2020
 
 ----
 ## schedule
 
-- 5 Nov - Experimental Rheology
-- 10 Nov - Energy, Rotation, Vorticity
-- 12 Nov - Compressible Flow, HW8 Due
-- 17 Nov - Non-Newtonian Fluids
+- 10 Nov - Experimental Rheology
+- 12 Nov - Energy, Rotation, Vorticity, HW8 Due
+- 17 Nov - Compressible Flow
+- 19 Nov - Non-Newtonian Fluids
 
 ---
 # flow models
